@@ -66,6 +66,17 @@ $ice: rgba(250,
     display: block !important;
     opacity: 1 !important;
     transition: all .8s;
+    position: relative;
+}
+
+#to-top-btn {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    background-color: violet;
+    left: -2000px;
+    bottom: -1000px;
+    transition: all .8s;
 }
 
 // ===================================================================
@@ -431,7 +442,8 @@ a.icon-Arrow-1::after {
                     font-size: 16px;
                     line-height: 135%;
                     color: #FFFFFF;
-                    padding-top: 15px;
+                    transition: all .8s;
+                    padding: 15px 0;
                 }
             }
         }
@@ -580,6 +592,10 @@ a.icon-Arrow-1::after {
                         letter-spacing: -0.01em;
                         color: #2E373B;
                     }
+                }
+                img {
+                    width: 33.3%;
+                    height: max-content;
                 }
             }
         }
@@ -739,7 +755,7 @@ footer {
     }
 }
 
-//===================================================================MEDIA=================================================================================================== 
+//===============================================================================================MEDIA=================================================================================================== 
 @media (max-width: $md1) {
     .hamburger-menu {
         .menu__btn {
@@ -797,7 +813,19 @@ footer {
                         font-size: 26px;
                         line-height: 135%;
                         color: #FFFFFF;
-                        padding-top: 40px;
+                        margin-top: 40px;
+                        position: relative;
+                        padding: 0 0 10px;
+                        &::after {
+                            content: '';
+                            width: 30%;
+                            height: 1px;
+                            background-color: white;
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            transform: translate(-50%, 0);
+                        }
                     }
                 }
             }
@@ -874,7 +902,7 @@ footer {
         .wrapper-3 {
             .categories {
                 display: flex;
-                flex-direction: column;
+                flex-direction: column !important;
                 .categories__item {
                     margin: 0 auto !important;
                     text-align: center;
@@ -916,6 +944,41 @@ footer {
             .views__rows {
                 .views__item {
                     width: 100%;
+                }
+            }
+        }
+    }
+    footer {
+        .wrapper-3 {
+            .categories {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .categories__item {
+                    margin: 0 auto !important;
+                    text-align: center;
+                    padding: 30px 0 30px;
+                    flex: 1 1 50%;
+                    min-width: 267px;
+                    img {
+                        padding: 10px 20px;
+                    }
+                    .categories__name {
+                        font-size: 24px;
+                        margin: 0 0 20px !important;
+                    }
+                    p {
+                        font-size: 18px;
+                        padding: 5px 0;
+                    }
+                    .search {
+                        position: relative;
+                        .search-area {}
+                        .search-btn {}
+                        .icon-rectangular-speech-bubble ::after {
+                            position: absolute;
+                        }
+                    }
                 }
             }
         }
