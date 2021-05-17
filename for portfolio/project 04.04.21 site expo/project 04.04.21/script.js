@@ -3,7 +3,7 @@ let categoriesName = document.querySelectorAll(".categories__name");
 let tabItem = document.querySelectorAll(".tab_item");
 let showClass = document.querySelector(".show");
 let pageWidth = window.screen.width;
-let toTopBtn = document.getElementById("to-top-btn");
+let toTopBtn = document.getElementById("");
 // ======================================
 if (pageWidth < 576) {
 
@@ -22,9 +22,3 @@ if (pageWidth < 576) {
     }
 };
 
-
-
-window.onscroll = console.log(pageYOffset);
-
-toTopBtn.style.bottom = '10' + 'px';
-toTopBtn.style.left = '10' + 'px';

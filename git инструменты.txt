@@ -1,0 +1,11 @@
+Выполните следующие действия, чтобы спроецировать на Github
+
+1) git init
+
+2) git add .
+
+3) git commit -m "Add all my files"
+
+4) git remote add origin https://github.com/yourusername/your-repo-name.git
+
+
