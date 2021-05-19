@@ -1,0 +1,141 @@
+@charset "UTF-8";
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+.header {
+  max-width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  background: url(/img/);
+  color: #C81F56;
+}
+
+.logo a {
+  color: #C81F56;
+}
+
+.logo a img {
+  color: #C81F56;
+  width: 23px;
+  height: 22px;
+}
+
+.nav__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__right .nav__item a {
+  font-size: 1.5rem;
+  color: black;
+  border-bottom: 1px #F0F0F0 solid;
+  margin: 0 2rem;
+  padding: 0.6rem;
+}
+
+.wrapper {
+  max-width: 1164px;
+  margin: 0 auto;
+}
+
+.first-page {
+  background-image: url(/img/gрopu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: white;
+  line-height: 5.9rem;
+  max-width: 925px;
+}
+
+.subtitle {
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  font-weight: bold;
+  color: white;
+  max-width: 676px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advantages {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.advantages p {
+  padding: 10px;
+}
+
+.date {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4.8rem;
+  line-height: 6.4rem;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 20px rgba(200, 31, 86, 0.5);
+}
+
+.label-btn {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: black;
+}
+
+label {
+  background-color: #FE840E;
+  padding: 13px;
+  border-radius: 2rem;
+}
