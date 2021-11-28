@@ -1,0 +1,107 @@
+@import url("css/__normalize.css");
+
+.top-menu {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+
+    .top-menu__buttons {
+        padding: 5px 20px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        li {
+            list-style: none;
+            text-align: center;
+            margin: auto;
+        }
+
+        a {
+            background-color: rgb(18, 41, 117);
+            padding: 20px;
+            border: 2px solid black;
+            box-shadow: -0px -5px black;
+            border-radius: 20px;
+
+            color: wheat;
+        }
+
+
+    }
+}
+
+.text-background {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+        a {
+            color: black;
+        }
+    }
+
+    .articles {
+        li {
+            &::marker {
+                color: red;
+            }
+        }
+    }
+
+
+}
+
+.grid-example {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.171);
+
+    .grid-example__bg {
+        display: grid;
+        grid-template-columns: 1fr 200px 1fr;
+        grid-template-rows: repeat(8, 1fr);
+
+        #grid1 {
+            background-color: green;
+            grid-row-start: 1;
+            grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 4;
+
+
+        }
+
+        #grid2 {
+            background-color: rgb(126, 128, 0);
+
+        }
+
+        #grid4 {
+            background-color: rgb(36, 30, 24);
+
+        }
+
+        #grid5 {
+            background-color: rgb(117, 111, 103);
+
+        }
+
+        #grid6 {
+            background-color: rgb(255, 192, 119);
+
+        }   
+
+        #grid7 {
+            background-color: rgb(0, 128, 79);
+
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #grid8 {
+            background-color: rgb(124, 0, 128);
+
+        }
+    }
+}

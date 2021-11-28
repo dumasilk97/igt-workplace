@@ -1,0 +1,723 @@
+<<<<<<< HEAD
+$orange  : #FE840E;
+$ff      : 'Montserrat',
+=======
+$orange     : #FE840E;
+$orangeBtn  : #FEB447;
+$ff         : 'Montserrat',
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+sans-serif;
+$fz   : 10px;
+$red  : #C81F56;
+
+html {
+    font-family : $ff;
+    font-size   : $fz;
+}
+
+
+// =========================================
+.header {
+    max-width : 1200px;
+    height    : 80px;
+    margin    : 0 auto;
+
+    font-size   : 2.2rem;
+    font-style  : normal;
+    font-weight : normal;
+
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+
+}
+
+.logo {
+    background : url(/img/);
+    color      : $red;
+
+    a {
+        color : $red;
+
+        img {
+            color  : $red;
+            width  : 23px;
+            height : 22px;
+        }
+    }
+}
+
+.nav__right {
+    display : flex;
+
+
+    .nav__item {
+        a {
+            font-size     : 1.5rem;
+            color         : black;
+            border-bottom : 1px #F0F0F0 solid;
+            margin        : 0 2rem;
+            padding       : 0.6rem;
+        }
+    }
+}
+
+
+<<<<<<< HEAD
+.wrapper {
+    max-width : 1164px;
+    margin    : 0 auto;
+}
+=======
+
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+
+.first-page {
+    background-image  : url(/img/gрopu.png);
+    background-repeat : no-repeat;
+    background-size   : cover;
+    width             : 100vw;
+<<<<<<< HEAD
+    height            : 100vh;
+
+
+}
+
+=======
+    min-height        : 800px;
+
+}
+
+.wrapper {
+    max-width   : 1164px;
+    margin      : 0 auto;
+    padding-top : 7.3rem;
+}
+
+
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+.title {
+    font-size   : 4.8rem;
+    font-weight : 800;
+    color       : white;
+    line-height : 5.9rem;
+<<<<<<< HEAD
+
+    max-width : 925px;
+=======
+    margin      : 0 0 1.2rem;
+    max-width   : 925px;
+
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+
+}
+
+.subtitle {
+    font-size   : 2.4rem;
+    line-height : 3.5rem;
+    font-weight : bold;
+    color       : white;
+
+<<<<<<< HEAD
+    max-width : 676px;
+=======
+    max-width     : 676px;
+    margin-bottom : 5rem;
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+}
+
+.container {
+    display         : flex;
+    justify-content : space-between;
+<<<<<<< HEAD
+=======
+    margin-bottom   : 5.5rem;
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+
+}
+
+.advantages {
+    width          : 30%;
+    display        : flex;
+    flex-direction : row;
+
+    color       : white;
+    font-size   : 1.6rem;
+    line-height : 2.6rem;
+
+    p {
+<<<<<<< HEAD
+        padding : 10px;
+=======
+        padding : 1rem;
+    }
+
+    img {
+        height      : 30px;
+        width       : 30px;
+        padding-top : 1.1rem;
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+    }
+}
+
+.date {
+    font-style     : normal;
+    font-weight    : 800;
+    font-size      : 4.8rem;
+    line-height    : 6.4rem;
+    letter-spacing : -0.01em;
+
+<<<<<<< HEAD
+    color : #FFFFFF;
+
+    text-shadow : 0px 4px 20px rgba(200, 31, 86, 0.5);
+=======
+    color       : #FFFFFF;
+    text-shadow : 0px 4px 20px rgba(200, 31, 86, 0.5);
+
+    margin-bottom : 5rem;
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+}
+
+.label-btn {
+    font-size      : 1.4rem;
+    font-style     : normal;
+    font-weight    : 600;
+    line-height    : 17px;
+<<<<<<< HEAD
+    display        : flex;
+    align-items    : center;
+    text-align     : center;
+    letter-spacing : 0.75px;
+    text-transform : uppercase;
+    color          : black;
+}
+
+label {
+    background-color : $orange;
+    padding          : 13px;
+    border-radius    : 2rem;
+=======
+    letter-spacing : 0.75px;
+    text-transform : uppercase;
+    color          : black;
+
+    display     : flex;
+    text-align  : center;
+    align-items : center;
+
+
+    background-color : $orangeBtn;
+    padding          : 13px;
+    border-radius    : 2rem;
+}
+
+
+// =====================================SECOND PAGE
+
+
+.second-page {
+    max-width : 946px;
+    margin    : 73px auto 0;
+
+}
+
+.categories__title {
+    font-size      : 3.4rem;
+    line-height    : 5rem;
+    font-weight    : bold;
+    color          : black;
+    margin-bottom  : 2.4rem;
+    letter-spacing : -0.01em;
+
+}
+
+.categories {
+    display               : grid;
+    grid-template-columns : 33% 33% 33%;
+
+
+}
+
+.category__item {
+    width      : 21rem;
+    min-height : 15.7rem;
+
+    position : relative;
+
+    margin : 0 14.6rem 3rem 0;
+
+    img {
+        height        : 32px;
+        width         : 40px;
+        margin-bottom : 2.3rem;
+    }
+
+    .text {
+        font-size      : 2rem;
+        line-height    : 3rem;
+        letter-spacing : 0.015rem;
+        color          : black;
+        margin         : 0;
+
+    }
+
+
+}
+
+.bacground-content {
+    width       : 100%;
+    height      : 100%;
+    font-size   : 9.6rem;
+    font-weight : 900;
+
+    color : rgba(254, 180, 71, 0.1);
+
+
+}
+
+.alignment {
+    position : absolute;
+    top      : 0;
+    left     : 0.5rem;
+}
+
+// ===============================/SECONDPAGE
+
+// ===============================/VACANCY
+
+.vacancy {
+    position : relative;
+
+    .bacground-content {
+        color     : rgba(200, 31, 86, .1);
+        max-width : 136rem;
+        margin    : 0 auto;
+    }
+}
+
+.slider {
+    max-width : 140rem;
+    margin    : 0 auto;
+    position  : relative;
+}
+
+.background {
+    position  : absolute;
+    right     : 0;
+    transform : translate(0, -25%);
+    z-index   : -1;
+}
+
+
+
+
+.swiper-slide {
+    flex            : 1 0 auto !important;
+    justify-content : space-between !important;
+    padding         : 2rem;
+    min-height      : 28.7rem;
+    background      : #FFFFFF;
+    box-shadow      : 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius   : 20px;
+    position        : relative;
+
+    .hh-site {
+        margin : 2rem 2rem 2rem 0;
+        height : 4rem;
+        width  : 4rem;
+
+        border-radius : 50%;
+
+
+    }
+
+    .slider__profession {
+        line-height    : 3rem;
+        font-size      : 2rem;
+        letter-spacing : -0.015rem;
+
+        margin : 0 0 2.3rem 0;
+    }
+
+    .salary {
+        color       : $red;
+        margin      : 2.3rem 0 6.3rem;
+        font-weight : 700;
+
+    }
+
+    .sponsor {
+        position : absolute;
+        left     : 2rem;
+        bottom   : 2rem;
+    }
+}
+
+
+
+.clarification {
+    max-width : 103rem;
+    margin    : 0 auto;
+    position  : relative;
+
+    .label-btn {
+        display : block;
+        width   : 25.7rem;
+        margin  : 6rem 0 0;
+    }
+
+    .title {
+        color       : black;
+        max-width   : 84.6rem;
+        font-size   : 3.4rem;
+        line-height : 5rem;
+        margin      : 9.4rem 0 2rem;
+    }
+
+    .subtitle {
+        color       : black;
+        font-weight : 500;
+
+        .smile {
+            background : url(/img/smiles/image.svg) no-repeat;
+        }
+
+    }
+}
+
+.smile {
+    content        : '';
+    // background : url(/img/smiles/image.svg) no-repeat; ПРОПИСЫВАТЬ ОТДЕЛЬНО!
+    width          : 5rem;
+    height         : 5rem;
+    position       : absolute;
+    margin         : 0 1rem;
+
+}
+
+.clarificate {
+    display         : flex;
+    flex-wrap       : nowrap;
+    flex-direction  : row;
+    justify-content : space-between;
+    max-width       : 140rem;
+    margin          : 0 auto;
+    position        : relative;
+
+
+}
+
+.left,
+.right {
+    max-width : 45%;
+    flex      : 1 1 auto;
+
+    img {
+        object-fit : cover;
+        max-height : 33rem;
+        height     : 100%;
+    }
+
+    p {
+        font-size      : 2rem;
+        line-height    : 3rem;
+        letter-spacing : 0.015rem;
+        color          : black;
+
+
+        text-align : center;
+        margin     : 1rem 0;
+
+    }
+}
+
+.because {
+    position              : relative;
+    background-image      : url(/img/6.png);
+    background-repeat     : no-repeat;
+    background-size       : cover;
+    background-position-x : 65%;
+
+}
+
+.background-img {
+    width      : 100%;
+    position   : absolute;
+    object-fit : cover;
+    z-index    : -1;
+}
+
+
+.container3 {
+    // max-width : 103rem;
+    margin : 0 auto;
+
+
+    .title {
+        padding-top : 17rem;
+        max-width   : 103rem;
+        margin      : 0 auto;
+        font-family : $ff;
+    }
+}
+
+.data-scientist {
+    display         : flex;
+    max-width       : 120rem;
+    margin          : 0 auto;
+    justify-content : space-between;
+
+    img {
+        object-fit      : cover;
+        object-position : center;
+        max-width       : 97rem;
+        max-width       : 65%;
+        flex            : 1 1 auto;
+    }
+
+
+    .mini-advantages {
+        margin : auto 0;
+    }
+
+    .macro-advantages {
+        flex      : 1 1 auto;
+        transform : translate(-35%, 0);
+        margin    : 3rem 0;
+
+        img {
+            float      : left;
+            max-width  : 5rem;
+            height     : 5rem;
+            margin     : 0 2rem;
+            background : transparent;
+        }
+
+        p {
+            font-size      : 2rem;
+            line-height    : 3rem;
+            letter-spacing : 0.015rem;
+            font-weight    : 600;
+            color          : #F0F0F0;
+        }
+    }
+}
+
+.flatpad {
+    display    : block;
+    margin     : 0 auto;
+    max-width  : 90%;
+    object-fit : contain;
+}
+
+.skills {
+    display         : flex;
+    max-width       : 110rem;
+    margin          : 0 auto 13rem auto;
+    justify-content : space-around;
+
+
+}
+
+.skill {
+    flex      : 1 1 auto;
+    max-width : 25%;
+
+
+    .title {
+        font-size      : 2.4rem;
+        line-height    : 3.5rem;
+        letter-spacing : -0.1rem;
+        padding        : 0;
+        font-weight    : 700;
+        font-family    : $ff;
+
+    }
+
+
+
+}
+
+.text {
+    font-size      : 2rem;
+    line-height    : 3rem;
+    letter-spacing : 0.015rem;
+    font-family    : $ff;
+    color          : #F0F0F0;
+    margin         : 3rem 0;
+}
+
+.certificate {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+
+    max-width : 110rem;
+
+    margin : 0 auto;
+
+
+    img {
+        flex : 1 1 auto;
+
+        max-width  : 50%;
+        object-fit : cover;
+
+    }
+
+    .certificate-text {
+        display        : flex;
+        flex-direction : column;
+        margin-left    : 5rem;
+
+        .title {
+            padding    : 0;
+            font-size  : 3.4rem;
+            text-align : left;
+            margin     : 0;
+
+        }
+
+        .text {
+            width : 70%;
+        }
+
+        .label-btn {
+            display : block;
+            width   : 16.4rem;
+
+        }
+    }
+}
+
+
+
+.compare {
+    display        : flex;
+    flex-direction : column;
+    margin         : 0 auto;
+
+    max-width : 100rem;
+
+
+
+
+    .title {
+        margin     : 5rem 0;
+        text-align : center;
+    }
+}
+
+.comparition {
+    display               : grid;
+    grid-template-columns : 1fr 1fr;
+}
+
+.common-course {
+    display            : grid;
+    grid-template-rows : auto;
+
+
+}
+
+
+// .comparition {
+//     display         : flex;
+//     flex-direction  : row;
+//     justify-content : space-between;
+
+//     margin-bottom : 10rem;
+// }
+
+// .common-course {
+//     display        : flex;
+//     flex-direction : column;
+//     max-width      : 40%;
+//     width          : 100%;
+
+//     img {
+//         height : 5rem;
+//         width  : 5rem;
+//     }
+
+
+// }
+
+// .our-course {
+//     max-width      : 60%;
+//     display        : flex;
+//     flex-direction : column;
+
+//     width : 100%;
+// }
+
+.course-item {
+    display         : flex;
+    flex-direction  : row;
+    min-height      : 10rem;
+    justify-content : flex-start;
+
+    // max-width : 35.4rem;
+    margin : 6.7rem 0 0;
+
+    img {
+        margin : 0 1.5rem;
+        width  : 5rem;
+        height : 5rem;
+    }
+}
+
+
+// .our-course-item {
+//     text-decoration : none;
+//     list-style      : none;
+
+
+//     font-size      : 2.4rem;
+//     line-height    : 3rem;
+//     letter-spacing : 0.001rem;
+
+//     font-weight : 600;
+
+//     // p {}
+
+// }
+
+// .common-course-item {
+
+//     font-size   : 1.6rem;
+//     line-height : 2.6rem;
+
+//     letter-spacing : -0.001rem;
+// }
+
+.price {
+    border-top      : 1px solid grey;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-around;
+
+    align-items : center;
+
+    .common-price {
+        max-width : 27rem;
+
+        p {
+            color          : #C4C4C4;
+            font-size      : 1.8rem;
+            line-height    : 2.2rem;
+            text-transform : uppercase;
+
+            span {
+                font-size      : 6rem;
+                letter-spacing : -0.005rem;
+                text-transform : uppercase;
+
+            }
+        }
+    }
+
+    .our-price {}
+>>>>>>> a3ea5b7af5125f85e7d298310ae4af91a9e46402
+}
