@@ -1,1 +1,81 @@
-/* No CSS */
+@import url("https ://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,900&display=swap");
+* a {
+  color: black;
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 10px;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active li a::before {
+  border-bottom: 1px solid black;
+  width: 18.5px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+}
+
+header {
+  background-color: rgba(56, 88, 4, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 165px;
+}
+
+header .header__wrapper {
+  max-width: 144rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  line-height: 165px;
+}
+
+header .header__wrapper .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 100px;
+}
+
+header .header__wrapper .header__logo img {
+  height: 64px;
+  width: 64px;
+}
+
+header .header__wrapper .header__memu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header .header__wrapper .header__memu .header__memu--item {
+  padding: 0 55px 0 0;
+  font-size: 22px;
+  font-family: "Poppins";
+  color: black;
+}
