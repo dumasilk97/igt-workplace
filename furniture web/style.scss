@@ -1,77 +1,177 @@
-@import url('https ://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,900&display=swap");
 
-$ff    : 'Poppins';
+$ff    : "Poppins";
 $grey  : rgba(56, 88, 4, 0.08);
-$dgrey : #C4C4C4;
+$dgrey : #c4c4c4;
 $green : #385804;
+$lg    : 1440px;
+
+
 
 * {
-    a {
-        color : black;
-    }
+  font-family: $ff;
+  font-size  : 10px;
+
+  a {
+    color     : black;
+    transition: transform 0.2s linear;
+    transform : scaleZ(1);
+  }
+
+  a:hover {
+    transition: 0.2s all linear;
+    transform : scaleZ(2);
+  }
 }
 
 body {
-    font-family : $ff;
-    font-size   : 10px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
 
+
+  section {
+    display       : flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
 }
 
 .active {
-    font-weight : 700;
+  font-weight: 700;
 
-    li {
-        a {
+  a {
+    width   : fit-content;
+    position: relative;
 
-            &::before {
-                border-bottom : 1px solid black;
-                width         : 18.5px;
-                height        : 1px;
-                position      : absolute;
-                left          : 0;
-
-            }
-        }
+    &::before {
+      content      : '';
+      border-bottom: 1px solid black;
+      width        : 30%;
+      height       : 1px;
+      left         : 35%;
+      top          : 120%;
     }
+  }
 }
 
-    header {
-        background-color : rgba(56, 88, 4, 0.08);
-        display          : flex;
-        flex-direction   : row;
-        justify-content  : center;
-        height           : 165px;
+// ----------------------------------------------------------------------------------------------------------------
+header {
+  background-color: rgba(56, 88, 4, 0.08);
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  height          : 165px;
 
-        .header__wrapper {
-            max-width      : 144rem;
-            width          : 100%;
-            display        : flex;
-            flex-direction : row;
+  .header__wrapper {
+    max-width     : 144rem;
+    width         : 100%;
+    display       : flex;
+    flex-direction: row;
 
-            line-height : 165px;
 
-            .header__logo {
-                display     : flex;
-                align-items : center;
-                padding     : 50px 100px;
+    .header__logo {
+      display    : flex;
+      align-items: center;
+      padding    : 50px 100px;
 
-                img {
-                    height : 64px;
-                    width  : 64px;
-                }
-            }
-
-            .header__memu {
-                display        : flex;
-                flex-direction : row;
-
-                .header__memu--item {
-                    padding     : 0 55px 0 0;
-                    font-size   : 22px;
-                    font-family : $ff;
-                    color       : black;
-                }
-            }
-        }
-
+      img {
+        height: 64px;
+        width : 64px;
+      }
     }
+
+    .header__memu {
+      display       : flex;
+      flex-direction: row;
+
+      .header__memu--item {
+        padding    : 0 55px 0 0;
+        font-family: $ff;
+        color      : black;
+
+        display    : flex;
+        align-items: center;
+
+        a {
+          font-size  : 22px;
+          font-family: $ff;
+
+
+
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-family: $ff;
+  font-weight: bold;
+  line-height: 96px;
+  font-size: 64px;
+
+  max-width: 662px;
+  color: #26313B;
+
+
+  
+}
+.text{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    max-width: 494px;
+}
+
+footer .text {
+  font-size: 22px;
+}
+.first__page {
+  background-color: $grey;
+}
+
+
+.btn{
+  width: 307px;
+  height: 78px;
+  background-color: $green;
+  color: #fff;
+
+}
+
+.combining {
+  max-width: $lg;
+  min-height: 850px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  .combining__text--img{
+    max-width: 680px;
+    max-height: 902px;
+    background-color: $dgrey;
+    position: relative;
+
+    top: 20%;
+    height: 100%;
+    width: 100%;
+
+
+    @media screen and (max-width: 1350px) {
+      position: relative !important;
+      display: inline-block;
+      top: 0;
+      right: 0;
+    }
+  }
+
+}
