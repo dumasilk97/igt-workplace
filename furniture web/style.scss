@@ -5,7 +5,8 @@ $grey  : rgba(56, 88, 4, 0.08);
 $dgrey : #c4c4c4;
 $green : #385804;
 $lg    : 1440px;
-
+$tablet: 768px;
+$mb    : 375px;
 
 
 * {
@@ -58,6 +59,124 @@ body {
 }
 
 // ----------------------------------------------------------------------------------------------------------------
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+  display    : none;
+  /* используем flex для центрирования содержимого */
+  align-items: center;
+  /* центрируем содержимое кнопки */
+  position   : fixed;
+  top        : 82px;
+  right: 10%;
+  width      : 26px;
+  height     : 26px;
+  cursor     : pointer;
+  z-index    : 1001;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display         : block;
+  position        : absolute;
+  width           : 100%;
+  height          : 2px;
+  background-color: #616161;
+}
+
+.menu__btn>span::before {
+  content: '';
+  top    : -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top    : 8px;
+}
+
+/* контейнер меню */
+.header__menu__burger {
+  display         : block;
+  position        : fixed;
+  visibility      : hidden;
+  top            : -100%;
+  left: 0;
+  width           : 100%;
+  height          : 100%;
+  margin          : 0;
+  padding         : 80px 0;
+  list-style      : none;
+  text-align      : center;
+  background-color: #ECEFF1;
+  z-index: 100;
+  box-shadow      : 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+/* элементы меню */
+.header__memu__item {
+  display        : block;
+  padding        : 12px 24px;
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform .6s linear;
+
+  margin: 40px auto;
+  &:hover{
+    transform: scale(1.1);
+    transition: all .6s linear;
+  }
+  a{
+
+    font-size: 34px;
+  }
+}
+
+// .header__memu__item:hover {
+//   background-color: #CFD8DC;
+// }
+
+#menu__toggle:checked~.menu__btn>span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+  top      : 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+  top      : 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.header__menu__burger {
+  visibility: visible;
+  top      : 0;
+}
+
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  transition-duration: .25s;
+}
+
+.header__menu__burger {
+  transition-duration: .25s;
+}
+
+.header__memu__item {
+  transition-duration: .25s;
+}
+
+// =======================================================================
+
 header {
   background-color: rgba(56, 88, 4, 0.08);
   display         : flex;
@@ -66,7 +185,6 @@ header {
   height          : 165px;
 
   .header__wrapper {
-    max-width     : 144rem;
     width         : 100%;
     display       : flex;
     flex-direction: row;
@@ -91,7 +209,7 @@ header {
       display       : flex;
       flex-direction: row;
 
-      .header__memu--item {
+      .header__memu__item {
         padding    : 0 55px 0 0;
         font-family: $ff;
         color      : black;
@@ -109,6 +227,12 @@ header {
       }
     }
   }
+}
+
+
+
+.header__menu__burger {
+  display: none;
 }
 
 .title {
@@ -254,83 +378,248 @@ footer .text {
 }
 
 .choose {
-  max-width: 1248px;
-  width    : 100%;
+  max-width : 1248px;
+  width     : 100%;
   min-height: 565px;
-  color: #fff;
-  margin: 0 auto;
+  color     : #fff;
+  margin    : 0 auto;
 
-  display: flex;
-  flex-direction: row;
+  display        : flex;
+  flex-direction : row;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap      : nowrap;
 
   background-color: $green;
-  z-index: 0;
+  z-index         : 0;
 
-  .btn{
+  .btn {
     background-color: #fff;
-    color: $green;
-    margin: 35px 0;
+    color           : $green;
+    margin          : 35px 0;
   }
 
-  .title{
-    color: white;
+  .title {
+    color      : white;
     font-weight: 700;
-    margin: 35px 0 35px 0;
-    
+    margin     : 35px 0 35px 0;
+
   }
 }
 
-.choose__img{
-    background-color: $dgrey;
-    max-width: 483px;
-    max-height: 497px;
-    width: 100%;
-    display: flex;
-    margin: 35px;
+.choose__img {
+  background-color: $dgrey;
+  max-width       : 483px;
+  max-height      : 497px;
+  width           : 100%;
+  display         : flex;
+  margin          : 35px;
+}
+
+.living {
+  max-width : 1247px;
+  min-height: 1800px;
+  width     : 100%;
+  margin    : 150px auto;
+
+  display       : flex;
+  flex-direction: column;
+  flex-wrap     : wrap;
+
+  .living__column {
+    &:first-child {
+      width       : 55%;
+      min-width   : 600px;
+      margin-right: 5%;
+      height      : 90%;
+
+      .living__img {
+        max-height      : 1142px;
+        height          : 100%;
+        width           : 100%;
+        background-color: $dgrey;
+        display         : block;
+
+        margin: 65px 0 0 0;
+      }
+
+    }
+
+    width         : 35%;
+    display       : flex;
+    flex-direction: column;
+
+
+    .living__column__img {
+      display         : inline-block;
+      background-color: $dgrey;
+      width           : 100%;
+      min-height      : 600px;
+      height          : 100%;
+    }
+
+    .textb {
+      font-weight: bold;
+      margin     : 20px 0;
+    }
+
+  }
+}
+
+
+.dream__room {
+  margin: 0 auto;
+
+  h2.title {
+    text-align: center;
+    margin    : 0 auto;
+    max-width : 70%;
   }
 
-  .living{
-    max-width: 1247px;
-    min-height: 1800px;
-    width: 100%;
-    margin: 150px auto;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  .dream__room__items {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    margin         : 80px 0;
 
-    .living__column{
-      &:first-child{
-        width: 55%;
-        min-width: 600px;
-        margin-right: 5%;
-        height: 100%;
+  }
 
-        .living__img{
-          max-height: 1142px;
-          height: 100%;
-          width: 100%;
-          background-color: $dgrey;
-          display: block;
+  .dream__room--item {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
 
-          margin: 65px 0 0 0;
+    text-align: center;
+
+
+
+    .dream__room--img {
+      background-color: $dgrey;
+      width           : 220px;
+      height          : 220px;
+    }
+
+    .text {
+      margin     : 24px 0;
+      font-weight: bold;
+    }
+  }
+}
+
+footer {
+  height         : fit-content;
+  padding        : 0 0 100px 0;
+  max-width      : 1248px;
+  margin         : 0 auto;
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+
+
+
+  .footer__menu {
+    width                : 45%;
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap           : 13%;
+    grid-template-rows   : 0.2fr 0.05fr 0.05fr 0.05fr;
+    row-gap              : 23px;
+
+    a {
+      min-width      : 145px;
+      height         : fit-content;
+      display        : flex;
+      align-items    : center;
+      justify-content: left;
+    }
+  }
+
+  .footer__join {
+    width: 35%;
+
+    .title {
+      font-size  : 48px;
+      line-height: 72px;
+
+      transform: translate(0, -50%);
+
+    }
+
+    form {
+      font-size: 26px;
+      position : relative;
+
+      &::before {
+        content         : '';
+        width           : 70%;
+        position        : absolute;
+        left            : 0;
+        top             : 150%;
+        height          : 2px;
+        background-color: black;
+
+
+      }
+
+      &:-moz-placeholder {
+        color: black;
+
+      }
+
+      .btn {
+        width : 69px;
+        height: 69px;
+
+        border-radius: 10px;
+        position     : absolute;
+        top          : -200%;
+        right        : 5%;
+
+        &::after {
+          width : 24px;
+          height: 24px;
+
+          content: '';
+
+          border-bottom: 2px solid white;
+          border-right : 2px solid white;
+          position     : absolute;
+          top          : 35%;
+          right        : 40%;
+
+          transform: rotateZ(-45deg);
         }
 
       }
-
-      width: 35%;
-      display: flex;
-      flex-direction: column;
-
-      
-      .living__column__img{
-        display: inline-block;
-        background-color: $dgrey;
-        width: 100%;
-        min-height: 600px;
-        height: 100%;
-      }
     }
   }
+}
+
+
+
+// -----------------------------------------------
+
+
+@media screen and (max-width: $tablet) {
+
+
+  .header__memu {
+    display: none !important
+  }
+
+  .menu__btn{
+    display: flex;
+  }
+  .header__menu__burger {
+    display: block;
+  }
+
+  .first__page {}
+
+
+
+
+}
