@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,36 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Furniture web</title>
 </head>
+
 <body>
 
     <header class="header">
-       <div class="header__wrapper">
+        <div class="header__wrapper">
             <div class="header__logo">
                 <a href="#""><img src="/img/logo.png" alt="logo.png"></a>
             </div>
             <ul class="header__memu">
-                <li class="header__memu--item active"><a href="#">Home </a></li>
-                <li class="header__memu--item"><a href="#">Product</a></li>
-                <li class="header__memu--item"><a href="#">About Us</a></li>
-                <li class="header__memu--item"><a href="#">Manufacturing</a></li>
+                <li class="header__memu__item active"><a href="#">Home </a></li>
+                <li class="header__memu__item"><a href="#">Product</a></li>
+                <li class="header__memu__item"><a href="#">About Us</a></li>
+                <li class="header__memu__item"><a href="#">Manufacturing</a></li>
             </ul>
-    
-            <ul class="header__menu--burger" style="display: none;">
-                <li class="header__memu--item"><a href="">Home</a></li>
-                <li class="header__memu--item"><a href="">Product</a></li>
-                <li class="header__memu--item"><a href="">About Us</a></li>
-                <li class="header__memu--item"><a href="">Manufacturing</a></li>
-            </ul>
-       </div>
+
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="header__menu__burger">
+                    <li class="header__memu__item active"><a href="">Home</a></li>
+                    <li class="header__memu__item"><a href="">Product</a></li>
+                    <li class="header__memu__item"><a href="">About Us</a></li>
+                    <li class="header__memu__item"><a href="">Manufacturing</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    
+
 
     <section class="first__page">
         <div class="combining">
@@ -38,7 +46,9 @@
                 <h1 class=" title left">
                     Combining Your Room With Wood Art From Us
                 </h1>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad porro facere nemo adipisci at incidunt, saepe tenetur mollitia necessitatibus maxime deleniti officia corporis quibusdam nulla, animi molestiae! Omnis, tempora.</p>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad porro facere
+                    nemo adipisci at incidunt, saepe tenetur mollitia necessitatibus maxime deleniti officia corporis
+                    quibusdam nulla, animi molestiae! Omnis, tempora.</p>
                 <form action="s"></form><input type="button" value="PRODUCT" class="btn text">
             </div>
             <div class="combining__text--img ">
@@ -47,107 +57,122 @@
         </div>
     </section>
 
-   <section>
+    <section>
         <div class="yourroom">
             <div class="yourroom__text">
                 <div class="title left">
-                  <h2 class="title">  Your Room Stand Differents</h2>
+                    <h2 class="title"> Your Room Stand Differents</h2>
                 </div>
             </div>
             <div class="yourroom__text right">
-                <ul class="yourroom__text--list" > <p class="topic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus alias laborum </p>
-                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod at nam laudantium?</li>
-                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod at nam laudantium?</li>
-                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod at nam laudantium?</li>
+                <ul class="yourroom__text--list">
+                    <p class="topic">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus alias laborum
+                    </p>
+                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod
+                        at nam laudantium?</li>
+                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod
+                        at nam laudantium?</li>
+                    <li class="yourroom__text--li text">Lorem ipsum dolor sit amet consectetur adipisicing elit. . Quod
+                        at nam laudantium?</li>
                 </ul>
             </div>
         </div>
-   </section>
+    </section>
 
 
     <section>
         <div class="choose">
             <div class="choose__img">
-                <img src="#" alt="" class="choose__img">
+                <!-- <img src="#" alt="" class="choose__img"> -->
             </div>
             <div class="choose__text">
-                    <h3 class="title">Choose Your Interior Privately</h3>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione hic aperiam unde enim sunt perferendis debitis consectetur non, praesentium dolor fugiat sed placeat vero iure aliquid repudiandae dicta nemo magnam.</p>
+                <h3 class="title">Choose Your Interior Privately</h3>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione hic aperiam unde enim
+                    sunt perferendis debitis consectetur non, praesentium dolor fugiat sed placeat vero iure aliquid
+                    repudiandae dicta nemo magnam.</p>
                 <input type="button" value="CHOOSE" class="btn text">
             </div>
         </div>
     </section>
-<section>
-    
+    <section>
+
         <div class="living">
             <div class="living__column">
                 <div class="living__title title">
                     <h3>Living The Room Like Yours</h3>
                 </div>
-        
-                <img src="" alt="" class="living__img">
-                <input type="button" value="CHECK IT">
+
+                <div class="living__img"><img src="#" alt=""></div>
+                <input type="button" value="CHECK IT" class="btn text">
             </div>
             <div class="living__column">
-                <img src="" alt="" class="living__column__img--small">
-                <p><b class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, dolorem ut nihil dignissimos aspernatur assumenda quasi deserunt? Eos, quidem cumque quisquam fuga, facere fugit voluptatibus libero ipsam veniam reiciendis earum.</b></p>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam vel illo odit velit veritatis quis, temporibus excepturi! Dignissimos est dolores quae labore fugiat, fugit dolorem, aspernatur aperiam magnam a perferendis!</p>
-    
+                <div class="living__column__img"><img src="" alt="" class=""></div>
+                <p class=" text textb">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam vel illo odit velit
+                    veritatis quis, temporibus excepturi! Dignissimos est dolores quae labore fugiat, fugit dolorem,
+                    aspernatur aperiam magnam a perferendis!</p>
+
             </div>
-                   <div class="living__column">
-                <img src="" alt="" class="living__column__img--small">
-                <p class="text"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, dolorem ut nihil dignissimos aspernatur assumenda quasi deserunt? Eos, quidem cumque quisquam fuga, facere fugit voluptatibus libero ipsam veniam reiciendis earum.</b></p>
-                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam vel illo odit velit veritatis quis, temporibus excepturi! Dignissimos est dolores quae labore fugiat, fugit dolorem, aspernatur aperiam magnam a perferendis!</p>
-    
+            <div class="living__column">
+                <div class="living__column__img"><img src="" alt="" class=""></div>
+                <p class="text textb">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam vel illo odit velit
+                    veritatis quis, temporibus excepturi! Dignissimos est dolores quae labore fugiat, fugit dolorem,
+                    aspernatur aperiam magnam a perferendis!</p>
+
             </div>
-           
+
         </div>
-</section>
-<section>
-    
+    </section>
+    <section>
+
         <div class="dream__room">
             <h2 class="title">Find Your Dream Room
                 Right Now</h2>
-    
-                <div class="dream__room--item">
+
+            <div class="dream__room__items">
+                <a href='#' class="dream__room--item">
                     <img src="" alt="" class="dream__room--img">
                     <div class="dream__room--item--name text">Living</div>
-                </div>
-                <div class="dream__room--item">
+                </a>
+                <a href='#' class="dream__room--item">
                     <img src="" alt="" class="dream__room--img">
                     <div class="dream__room--item--name text">Bath</div>
-                </div>
-                <div class="dream__room--item">
+                </a>
+                <a href='#' class="dream__room--item">
                     <img src="" alt="" class="dream__room--img">
                     <div class="dream__room--item--name text">Terrace</div>
-                </div>
-                <div class="dream__room--item">
+                </a>
+                <a href='#' class="dream__room--item">
                     <img src="" alt="" class="dream__room--img">
                     <div class="dream__room--item--name text">Kitchen</div>
-                </div>
+                </a>
+            </div>
         </div>
-</sectio>
+        </sectio>
 
 
-    <footer class="footer">
-        <div class="footer__menu">
-            
-            <a href="#" class="text">Our Services</a>
-            <a href="#" class="text">Menu</a>
-            <a href="#" class="text">Help</a>
-            <a href="#" class="text">Border</a>
-            <a href="#" class="text">Home</a>
-            <a href="#" class="text">Help center</a>
-            <a href="#" class="text">Campaign</a>
-            <a href="#" class="text">Product</a>
-            <a href="#" class="text">CS</a>
-            <a href="#" class="text">Manufact</a>
-            <a href="#" class="text">Manufacturing</a>
-        </div>
-        <div class="footer__join-us">
-            <div class="title">Join Us</div>
-            <input type="email" value="" placeholder="Enter Your Email" class="">
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="footer__menu">
+
+                <a href="#" class="text">Our Services</a>
+                <a href="#" class="text">Menu</a>
+                <a href="#" class="text">Help</a>
+                <a href="#" class="text">Border</a>
+                <a href="#" class="text">Home</a>
+                <a href="#" class="text">Help center</a>
+                <a href="#" class="text">Campaign</a>
+                <a href="#" class="text">Product</a>
+                <a href="#" class="text">CS</a>
+                <a href="#" class="text">Manufact</a>
+                <a href="#" class="text">Manufacturing</a>
+            </div>
+            <div class="footer__join">
+                <div class="title">Join Us</div>
+                <form action="#"><input type="email" value="" placeholder="Enter Your Email" class=""><button
+                        type="submit" class="btn "></button></form>
+            </div>
+        </footer>
 </body>
+
 </html>
