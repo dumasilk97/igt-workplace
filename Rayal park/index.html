@@ -1,46 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/__normalize.css">
-<link rel="stylesheet" href="fonts/font.css">
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/__normalize.css">
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
 
     <title>Rayal park</title>
 </head>
-<body>
-  <header class="header">
-      <div class="header__wrapper">
-          <a href="#"><img src="img/brand.png" alt="logo"></a>
-          <ul class="menu">
-             <a href="#"> <li class="menu__item menu__item__active">Home</li></a>
-             <a href="#"> <li class="menu__item">Features</li></a>
-             <a href="#"> <li class="menu__item">Gallary</li></a>
-             <a href="#"> <li class="menu__item">Testimonials</li></a>
-          </ul>
-          <button type="submit" class="btn">Book now</button>
-      </div>
-  </header>
 
-  <section class="first-page">
-      <div class="first-page__wrapper">
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <a class="brand" href="#"></a>
+            <nav>
+                <ul class="header__menu">
+                    <a class="header__menu__item header__menu__item__active">
+                        <li>Home</li>
+                    </a>
+                    <a href="#" class="header__menu__item">
+                        <li>Features</li>
+                    </a>
+                    <a href="#" class="header__menu__item">
+                        <li>Gallary</li>
+                    </a>
+                    <a href="#" class="header__menu__item">
+                        <li>Testimonials</li>
+                    </a>
+                </ul>
+            </nav>
+            <button type="submit" class="btn">Book now</button>
+        </div>
+    </header>
+
+    <section class="first-page">
+        <div class="first-page__wrapper">
             <p class="pre-title">
                 serenity
             </p>
-            <h1 class="title">Stay with us feel like <span>home</span>.</h1>
+            <h1>Stay with us feel like <span>home</span>.</h1>
             <p class="text">
-                Pet-friendly hotels are becoming increasingly popular; appealing to travellers who can’t bear to be parted.Pet-friendly hotels are becoming increasingly popular; appealing to travellers who can’t bear to be parted.
+                Pet-friendly hotels are becoming increasingly popular; appealing to travellers who can’t bear to be
+                parted.
             </p>
+            <button class="btn">Read more</button>
+        </div>
+    </section>
+    <section class="video-slider">
+        <div class="video-slider__wrapper">
+            <img src="../img/video1.png" class="video-slider__active"></img>
+            <img src="../img/video2.png" class="video-slider__passive"></img>
+        </div>
+        <div class="video-slider__right">
+            <h3 class="pre-title">
+                dream holidays
+            </h3>
+            <h2 class="title">
+                Enjoy unforgettable experiences in dream hotels.
+            </h2>
+            <button class="btn">
+                View more
+            </button>
+        </div>
+    </section>
 
-            <button class="btn" >Read more</button>
-      </div>
-  </section>
-<section class="">
+    <section class="achievements">
+        <div class="achievements__wrapper">
+            <div class="achievements__title">
+                <h3 class="title">
+                    Why you choose us!
+                </h3>
+                <p class="text">Naturally, it’s becoming even more important for hotel and hospitality brands to stand
+                    out from the crowd. Content marketing remains a key way for hotels to do this.</p>
 
-</section>
+            </div>
+            <ul class="achievements__list">
+                <li class="achievements__item">
+                    <img src="img/easyBoking.png" alt="" class="achievements__item__img">
+                    <p class="title">Easy booking </p>
+                    <p class="text">The booking process should include minimal steps.</p>
+                </li>
+                <li class="achievements__item">
+                    <img src="img/friendly.png" alt="" class="achievements__item__img">
+                    <p class="title">Friendly interface</p>
+                    <p class="text">A hotel booking engine with a good user-friendly.</p>
+                </li>
+                <li class="achievements__item">
+                    <img src="img/responsibility.png" alt="" class="achievements__item__img">
+                    <p class="title">Responsibility</p>
+                    <p class="text">You should be able to add rooms to your system.</p>
+                </li>
+                <li class="achievements__item">
+                    <img src="img/supply.png" alt="" class="achievements__item__img">
+                    <p class="title">Quick order supply</p>
+                    <p class="text">The booking process should include minimal steps.</p>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <ul class="gallery__wrapper">
+            <li class="gallery__about">
+                <h3 class="title">
+                    About hotel gallery
+                </h3>
+                <p class="text">While some of these examples are real – actually offering guests a stay in the locations
+                    advertised – it’s mainly just a way.</p>
+
+                <button class="btn">Book now</button>
+            </li>
+            <li class="gallery__item">
+                <img src="img/luxRoom.png" alt="" class="gallery__item__bgr">
+                <div class="gallery__item__description">
+                    <p class="title">
+                        Lux: Room
+                    </p>
+                    <p class="gallery__item__price">
+                        <span>$60</span> night
+                    </p>
+
+                    <button class="btn">Book now</button>
+                </div>
+            </li>
+            <li class="gallery__item">
+                <img src="img/miniRoom.png" alt="" class="gallery__item__bgr">
+                <div class="gallery__item__description">
+                    <p class="title">
+                        Mini Room
+                    </p>
+                    <p class="gallery__item__price">
+                        <span>$70</span> night
+                    </p>
+
+                    <button class="btn">Book now</button>
+                </div>
+            </li>
+            <li class="gallery__item">
+                <img src="img/standeroom.png" alt="" class="gallery__item__bgr">
+                <div class="gallery__item__description">
+                    <p class="title">
+                        Stande Room
+                    </p>
+                    <p class="gallery__item__price">
+                        <span>$65</span> night
+                    </p>
+
+                    <button class="btn">Book now</button>
+                </div>
+            </li>
+            <li class="gallery__item">
+                <img src="img/singleroom.png" alt="" class="gallery__item__bgr">
+                <div class="gallery__item__description">
+                    <p class="title">
+                        Single Room
+                    </p>
+                    <p class="gallery__item__price">
+                        <span>$55</span> night
+                    </p>
+
+                    <button class="btn">Book now</button>
+                </div>
+            </li>
+            <li class="gallery__item">
+                <img src="img/eliteroom.png" alt="" class="gallery__item__bgr">
+                <div class="gallery__item__description">
+                    <p class="title">
+                        Elite Room
+                    </p>
+                    <p class="gallery__item__price">
+                        <span>$65</span> night
+                    </p>
+
+                    <button class="btn">Book now</button>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__wrapper">
+            <div class="reviews__title">
+                <h3 class="title">What our client say</h3>
+                <button class="btn">
+                    Viev All
+                </button>
+            </div>
+            <div class="reviews__slider swiper">
+                <ul class="reviews__list swiper-wrapper">
+                    <li class="reviews__item swiper-slide">
+                        <div class="reviews__item__img__circle">
+                            <img src="img/client1.png" alt="" class="reviews__item__img">
+                        </div>
+                        <p class="quotes">,,</p>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam.
+                        </p>
+                        <p class="reviews__item__name">David lee</p>
+                        <a href="#" class="reviews__item__link">davidlee@</a>
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        <div class="reviews__item__img__circle">
+                            <img src="img/client2.png" alt="" class="reviews__item__img">
+                        </div>
+                        <p class="quotes">,,</p>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam.
+                        </p>
+                        <p class="reviews__item__name">Ravi shankor</p>
+                        <a href="#" class="reviews__item__link">ravishankor@</a>
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        <div class="reviews__item__img__circle">
+                            <img src="img/client3.png" alt="" class="reviews__item__img">
+                        </div>
+                        <p class="quotes">,,</p>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam.
+                        </p>
+                        <p class="reviews__item__name">Thomas lew</p>
+                        <a href="#" class="reviews__item__link">thomaslew@</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="email-form">
+        <p class="pre-title">
+            STAY IN TOUCH
+        </p>
+        <p class="title">Join our email. First to know about specials,events and more!</p>
+
+        <form action="" class="email__input">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" class="email__area">
+            <input type="button" value="Subscribe" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__item">
+                <a href="#"><img src="img/brand.png" alt="logo" class="brand"></a>
+                <p class="text">Travel deals on hotels, flights, vacation packages.</p>
+                <p class="contacts text">
+                    @shovasatkhira88.com
+
+                </p>
+                <ul class="social">
+                    <li><a href="#" class="social__item"><img src="img/facebook.png" alt=""></a></li>
+                    <li><a href="#" class="social__item"><img src="img/instagram.png" alt=""></a></li>
+                    <li><a href="#" class="social__item"><img src="img/twitter.png" alt=""></a></li>
+                    <li><a href="#" class="social__item"><img src="img/google.png" alt=""></a></li>
+                </ul>
+
+            </div>
+            <div class="footer__item  ">
+                <ul class="footer__item__grid">
+                    <a href="#">
+                        <li>Home </li>
+                    </a>
+                    <a href="#">
+                        <li>Pages </li>
+                    </a>
+                    <a href="#">
+                        <li>Accessibility </li>
+                    </a>
+                    <a href="#">
+                        <li>Blogs </li>
+                    </a>
+                    <a href="#">
+                        <li>Lertifiotion </li>
+                    </a>
+                    <a href="#">
+                        <li>Careers </li>
+                    </a>
+                    <a href="#">
+                        <li>Knowledge </li>
+                    </a>
+                    <a href="#">
+                        <li>Communing </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <p class="title">subscribe</p>
+                <form action="" class="email__input">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address"
+                        class="email__area">
+                    <input type="button" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
