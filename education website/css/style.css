@@ -325,19 +325,22 @@ h2.title_b {
 }
 
 .features {
-  max-width: 1230px;
+  max-width: 1260px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   margin-bottom: 160px;
+  padding: 0 15px;
 }
 
 .features .features__info {
   position: absolute;
-  min-width: 728px;
+  max-width: 728px;
+  width: 100%;
   padding: 40px;
   background-color: #fff;
-  top: 34%;
-  left: 40%;
+  right: 5%;
+  bottom: 20%;
   margin-bottom: 164px;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
           box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
@@ -356,14 +359,44 @@ h2.title_b {
 }
 
 .features .features__imgs {
-  max-width: 1230px;
-  overflow: hidden;
   display: -ms-grid;
   display: grid;
+  width: 100%;
+  overflow: hidden;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: 1fr;
+  gap: 36px 16px;
+}
+
+.features .features__imgs .features__img {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  max-width: 608px;
+  width: 100%;
+  min-height: 390px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.features .features__imgs .features__img:first-child {
+  max-width: 95%;
+  min-height: 697px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 .skills {
@@ -445,7 +478,7 @@ h2.title_b {
 }
 
 .teachers {
-  max-width: 1230px;
+  max-width: 1260px;
   margin: 0 auto;
   margin-bottom: 160px;
 }
@@ -466,6 +499,7 @@ h2.title_b {
 }
 
 .teachers-grid {
+  padding: 0 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;

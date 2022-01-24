@@ -67,11 +67,12 @@ $mobile: 375px;
     transform: translate(50%, 15%);
     color    : #FF0F54;
 }
+
 .icon-Email:before {
-    content: "\e900";
-    color: #fff;
-    width: 16px;
-    height: 16px;
+    content     : "\e900";
+    color       : #fff;
+    width       : 16px;
+    height      : 16px;
     margin-right: 20px;
 }
 
@@ -80,18 +81,18 @@ $mobile: 375px;
 }
 
 .icon-office:before {
-    content: "\e902";
-    color: #fff;
-    width: 16px;
-    height: 16px;
+    content     : "\e902";
+    color       : #fff;
+    width       : 16px;
+    height      : 16px;
     margin-right: 20px;
 }
 
 .icon-Phone:before {
-    content: "\e903";
-    color: #fff;
-    width: 16px;
-    height: 16px;
+    content     : "\e903";
+    color       : #fff;
+    width       : 16px;
+    height      : 16px;
     margin-right: 20px;
 }
 
@@ -110,6 +111,7 @@ $mobile: 375px;
 .icon-thimbup:before {
     content: "\e907";
 }
+
 // ============================================================================================
 
 p,
@@ -131,7 +133,7 @@ body {
     width          : 100%;
 
 
-    
+
 }
 
 
@@ -233,8 +235,8 @@ body {
     color           : #fff;
     text-transform  : capitalize;
     border-radius   : 8px;
-    cursor: pointer;
-    margin-bottom: 96px;
+    cursor          : pointer;
+    margin-bottom   : 96px;
 }
 
 .schools {
@@ -341,25 +343,26 @@ h2.title_b {
 
 
 .features {
-    max-width    : $lp;
+    max-width    : $lp+30px;
+    width: 100%;
     margin       : 0 auto;
     position     : relative;
     margin-bottom: 160px;
+    padding: 0 15px;
 
 
 
 
     .features__info {
         position        : absolute;
-        min-width       : 728px;
+        max-width       : 728px;
+        width: 100%;
         padding         : 40px;
         background-color: #fff;
-        top             : 34%;
-        left            : 40%;
+        right           : 5%;
+        bottom          : 20%;
         margin-bottom   : 164px;
         box-shadow      : 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-
-
 
         .features__text {
             margin-bottom: 16px;
@@ -371,29 +374,41 @@ h2.title_b {
             font-size  : 16px;
             line-height: 32px;
             color      : #FF0A54;
-
-
         }
-
-
     }
 
     .features__imgs {
-        max-width: $lp;
-
-        overflow: hidden;
-
-        display: grid;
+        display              : grid;
+        width: 100%;
+        overflow             : hidden;
+        grid-template-rows   : 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        .features__img {
+        grid-auto-flow: 1fr;
+        gap                  : 36px 16px;
 
+
+
+        .features__img {
             &:first-child {
-              
-               
+                max-width        : 95%;
+                min-height       : 697px;
+                object-fit       : cover;
+                object-position  : center;
+                grid-row-start   : 1;
+                grid-row-end     : 2;
+                grid-column-start: 1;
+                grid-column-end  : 2;
 
             }
-           
+
+            grid-row-start : 2;
+            grid-row-end   : 3;
+            max-width      : 608px;
+            width: 100%;
+            min-height     : 390px;
+            object-fit     : cover;
+            object-position: center;
+            
         }
 
     }
@@ -479,7 +494,7 @@ h2.title_b {
 
 
 .teachers {
-    max-width    : $lp;
+    max-width    : $lp+30px;
     margin       : 0 auto;
     margin-bottom: 160px;
 
@@ -500,10 +515,12 @@ h2.title_b {
 }
 
 .teachers-grid {
+    padding: 0 15px;
     display              : grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows   : 1fr 1fr;
     gap                  : 24px 16px;
+
 
     .teachers-grid__item {
         border-radius   : 8px;
@@ -738,10 +755,9 @@ h2.title_b {
 
 .copyright {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #fff;
+    right   : 0;
+    bottom  : 0;
+    color   : #fff;
 
 
 }
-
