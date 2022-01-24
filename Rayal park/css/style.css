@@ -233,6 +233,7 @@ nav {
   margin: 0 auto;
   position: relative;
   max-width: 50%;
+  min-width: 570px;
 }
 
 .video-slider .video-slider__wrapper img {
@@ -259,6 +260,7 @@ nav {
 
 .video-slider__right {
   max-width: 50%;
+  min-width: 430px;
 }
 
 .video-slider__right .title {
@@ -437,6 +439,10 @@ nav {
 .reviews {
   max-width: 1140px;
   margin: 0 auto 140px;
+}
+
+.reviews .reviews__wrapper {
+  padding: 0 15px;
 }
 
 .reviews .reviews__wrapper .reviews__title {
@@ -689,4 +695,24 @@ nav {
   background-color: #fff !important;
   -webkit-transition: bacground-color .6s ease-in-out !important;
   transition: bacground-color .6s ease-in-out !important;
+}
+
+@media screen and (max-width: 1140px) {
+  .achievements__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 720px;
+  }
+  .achievements__list .achievements__item {
+    margin: 20px 30px 0 0 !important;
+  }
+  .video-slider {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .video-slider .btn {
+    margin: 0 auto;
+  }
 }
