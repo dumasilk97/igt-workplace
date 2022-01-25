@@ -96,6 +96,12 @@
   .about-us__img {
     width: 100% !important;
   }
+  .teachers-grid {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr 1fr !important;
+  }
 }
 
 p,
@@ -146,6 +152,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 15px;
 }
 
 .header .header__wrapper .logo {
@@ -189,6 +196,7 @@ body {
 .greetings-page .greetings-page__wrapper {
   max-width: 1230px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .greetings-page .title_b {
@@ -311,6 +319,7 @@ body {
 
 .about-us .bgr-image {
   width: 100%;
+  height: 100%;
   z-index: -1;
   position: absolute;
   top: 257px;
@@ -416,13 +425,15 @@ h2.title_b {
 }
 
 .skills {
-  max-width: 1440px;
+  max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 160px;
 }
 
 .skills .skills__info {
   max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: -50px;
   font-family: "OpenSans-Regular";
@@ -431,6 +442,7 @@ h2.title_b {
   font-size: 16px;
   line-height: 28px;
   color: #79799B;
+  padding: 0 15px;
 }
 
 .skills .skills__info .text {
@@ -439,6 +451,7 @@ h2.title_b {
 
 .swiper-wrapper {
   max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
   height: 770px;
   -webkit-box-align: end;
@@ -686,6 +699,7 @@ h2.title_b {
 
 .footer__wrapper {
   max-width: 1230px;
+  padding: 0 15px;
   margin: 96px auto;
   display: -webkit-box;
   display: -ms-flexbox;

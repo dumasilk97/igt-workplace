@@ -112,16 +112,22 @@ $mobile: 375px;
     content: "\e907";
 }
 
-// ============================================================================================
+// ==========================================================media==================================
 @media screen and (max-width: 1000px) {
     .about-us {
         flex-direction: column !important;
 
 
-        &__img{
+        &__img {
             width: 100% !important;
         }
     }
+
+    .teachers-grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows   : 1fr 1fr 1fr 1fr !important;
+    }
+
 
 }
 
@@ -142,9 +148,6 @@ body {
     flex-direction : column;
     justify-content: space-between;
     width          : 100%;
-
-
-
 }
 
 
@@ -163,7 +166,7 @@ body {
         display        : flex;
         justify-content: space-between;
         align-items    : center;
-
+        padding        : 0 15px;
 
 
         .logo {
@@ -214,6 +217,7 @@ body {
     .greetings-page__wrapper {
         max-width: $lp;
         margin   : 0 auto;
+        padding  : 0 15px;
 
     }
 
@@ -319,13 +323,14 @@ body {
     }
 
     .about-us__img {
-        width: 50%;
-        object-fit: cover;
+        width          : 50%;
+        object-fit     : cover;
         object-position: center;
     }
 
     .bgr-image {
         width   : 100%;
+        height  : 100%;
         z-index : -1;
         position: absolute;
         top     : 257px;
@@ -430,13 +435,16 @@ h2.title_b {
 }
 
 .skills {
-    max-width    : $lg;
+    max-width: $lp;
+    width    : 100%;
+
     margin       : 0 auto;
     margin-bottom: 160px;
 
 
     .skills__info {
         max-width    : $lp;
+        width        : 100%;
         margin       : 0 auto;
         margin-bottom: -50px;
         font-family  : $pr;
@@ -445,6 +453,7 @@ h2.title_b {
         font-size    : 16px;
         line-height  : 28px;
         color        : $text-c;
+        padding      : 0 15px;
 
         .text {
             max-width: 615px;
@@ -454,6 +463,7 @@ h2.title_b {
 
 .swiper-wrapper {
     max-width  : $lp;
+    width      : 100%;
     margin     : 0 auto;
     height     : 770px;
     align-items: flex-end;
@@ -696,6 +706,7 @@ h2.title_b {
 
     &__wrapper {
         max-width      : $lp;
+        padding        : 0 15px;
         margin         : 96px auto;
         display        : flex;
         flex-direction : row;
