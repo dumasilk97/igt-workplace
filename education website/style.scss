@@ -272,6 +272,19 @@ $mobile: 375px;
         line-height: 44px !important;
     }
 
+
+    .features{
+        &__info{
+            position: relative !important;
+            right: 0 !important;
+            bottom: 0!important;
+            margin-bottom: 10px !important;
+        }
+    }
+    .features__imgs{
+        display: none !important;
+        
+    }
     .teacher__name {
         font-size  : 28px !important;
         line-height: 34px !important;
@@ -299,6 +312,8 @@ $mobile: 375px;
     .instagram-feed__item {
         min-height: 360px !important;
     }
+
+    
 }
 
 p,
@@ -456,6 +471,13 @@ body {
                 left     : 50%;
 
             }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
         }
     }
 
@@ -465,13 +487,11 @@ body {
 .about-us {
     display       : flex;
     flex-direction: row;
-
-
-    max-width    : $lp + 30px;
-    margin       : 0 auto;
-    margin-bottom: 160px;
-    position     : relative;
-    padding      : 0 15px;
+    max-width     : $lp + 30px;
+    margin        : 0 auto;
+    margin-bottom : 160px;
+    position      : relative;
+    padding       : 0 15px;
 
     .about-us__info {
         flex        : 0 0 40%;
@@ -486,10 +506,7 @@ body {
             font-weight  : normal;
             font-size    : 16px;
             line-height  : 28px;
-            /* or 175% */
         }
-
-
     }
 
     .about-us__img {
@@ -504,7 +521,6 @@ body {
         z-index : -1;
         position: absolute;
         top     : 257px;
-
     }
 }
 
@@ -539,9 +555,6 @@ h2.title_b {
     padding      : 0 15px;
     height       : fit-content;
 
-
-
-
     .features__info {
         position        : absolute;
         max-width       : 728px;
@@ -575,8 +588,6 @@ h2.title_b {
         grid-auto-flow       : 1fr;
         gap                  : 36px 16px;
 
-
-
         .features__img {
             &:first-child {
                 max-width        : 95%;
@@ -587,7 +598,6 @@ h2.title_b {
                 grid-row-end     : 2;
                 grid-column-start: 1;
                 grid-column-end  : 2;
-
             }
 
             grid-row-start : 2;
@@ -599,18 +609,14 @@ h2.title_b {
             object-position: center;
 
         }
-
     }
-
 }
 
 .skills {
     max-width: $lp;
     width    : 100%;
-
     margin       : 0 auto;
     margin-bottom: 160px;
-
 
     .skills__info {
         max-width    : $lp;
@@ -662,9 +668,7 @@ h2.title_b {
         left       : 50%;
         transform  : translate(-50%, 0);
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
     }
-
 }
 
 .swiper-button-next,
@@ -675,7 +679,6 @@ h2.title_b {
     height       : 48px;
     width        : 48px;
     overflow     : visible;
-
 }
 
 .swiper-button-next:after,
@@ -698,7 +701,6 @@ h2.title_b {
     margin       : 0 auto;
     margin-bottom: 160px;
 
-
     .text_r,
     .title_sb,
     .title_b {
@@ -709,7 +711,6 @@ h2.title_b {
 
         &:last-child {
             margin-bottom: 48px;
-
         }
     }
 }
@@ -721,7 +722,6 @@ h2.title_b {
     grid-template-rows   : 1fr 1fr;
     gap                  : 24px 16px;
 
-
     .teachers-grid__item {
         border-radius   : 8px;
         max-width       : 296px;
@@ -730,7 +730,6 @@ h2.title_b {
         position        : relative;
         transition      : all 0.6s ease-in-out;
         z-index         : 1;
-
 
         .overlay-box {
             height          : 100%;
@@ -754,11 +753,9 @@ h2.title_b {
         }
 
         .teacher__info {
-
             position: absolute;
             height  : 38%;
             width   : 100%;
-
             top       : 75%;
             left      : 50%;
             transform : translate(-50%, 0);
@@ -771,7 +768,6 @@ h2.title_b {
                 color        : #FFFFFF;
                 text-shadow  : 0px 0px 10px rgba(0, 0, 0, 0.5);
                 margin-bottom: 4px;
-
             }
 
             .teacher__position {
@@ -780,7 +776,6 @@ h2.title_b {
                 line-height  : 24px;
                 color        : #FFFFFF;
                 margin-bottom: 40px;
-
             }
 
             .teacher__links {
@@ -789,8 +784,6 @@ h2.title_b {
                 justify-content: center;
                 margin         : 0 auto;
                 opacity        : 0;
-
-
             }
         }
 
