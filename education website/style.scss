@@ -1,4 +1,5 @@
 @import url(/css/fonts.css);
+@import url(/css/icon.css);
 
 $hb : 'Poppins-Bold';
 $hsb: 'Poppins-SemiBold';
@@ -112,6 +113,102 @@ $mobile: 375px;
     content: "\e907";
 }
 
+// =============================================burger
+.menu-btn {
+    // display: flex;
+    display    : none;
+    align-items: center;
+    position   : absolute;
+    top        : 35px;
+    right      : 40px;
+    width      : 52px;
+    height     : 52px;
+    cursor     : pointer;
+    z-index    : 11;
+
+}
+
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
+    display            : block;
+    position           : absolute;
+    width              : 100%;
+    height             : 3px;
+    background-color   : #fff;
+    transition-duration: .25s;
+}
+
+.menu-btn>span::before {
+    content: '';
+    top    : -16px;
+}
+
+.menu-btn>span::after {
+    content: '';
+    top    : 16px;
+}
+
+.menubox {
+    display            : block;
+    position           : fixed;
+    visibility         : hidden;
+    top                : -100%;
+    left               : 0%;
+    width              : 100%;
+    height             : 100%;
+    margin             : 0;
+    padding            : 80px 0;
+    list-style         : none;
+    background-color   : #A30031;
+    box-shadow         : 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    z-index            : 10;
+}
+
+.menu-item {
+    display            : block;
+    padding            : 40px 24px;
+    width              : 100% !important;
+    text-align         : center;
+    color              : #333;
+    font-size          : 40px;
+    font-weight        : 600;
+    text-decoration    : none;
+    transition-duration: .25s;
+    font-family        : $hb;
+}
+
+.menu-item:hover {
+    background-color: #CFD8DC;
+}
+
+
+#menu-toggle {
+    opacity: 0;
+}
+
+#menu-toggle:checked~.menu-btn>span {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked~.menu-btn>span::before {
+    top      : 0;
+    transform: rotate(0);
+}
+
+#menu-toggle:checked~.menu-btn>span::after {
+    top      : 0;
+    transform: rotate(90deg);
+}
+
+#menu-toggle:checked~.menubox {
+    visibility: visible;
+    top       : 0;
+}
+
+
+
 // ==========================================================media==================================
 @media screen and (max-width: 1000px) {
     .about-us {
@@ -129,6 +226,79 @@ $mobile: 375px;
     }
 
 
+}
+
+@media screen and (max-width: $tablet) {
+    .header__wrapper {}
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .header__menu__list {
+        display: none !important;
+    }
+
+    .active {
+        &::before {
+            border-bottom: transparent !important;
+        }
+    }
+
+    .swiper-wrapper {
+        height    : fit-content !important;
+        max-height: 770px;
+        margin-top: 60px !important;
+    }
+
+    .swiper__item {
+        height: 450px !important;
+        ;
+
+        .slide__text {
+            font-size: 24px !important;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .title_b {
+        font-size  : 38px !important;
+        line-height: 44px !important;
+    }
+
+    .teacher__name {
+        font-size  : 28px !important;
+        line-height: 34px !important;
+    }
+
+    .teachers-grid__item {
+        min-height: 280px !important;
+
+        &:hover {
+            .teacher__info {
+                top: 20% !important;
+            }
+        }
+    }
+
+    .teacher__info {
+        top: 60% !important;
+    }
+
+    .teacher__link,
+    .social-link {
+        margin: 0 2px !important;
+    }
+
+    .instagram-feed__item {
+        min-height: 360px !important;
+    }
 }
 
 p,
@@ -482,6 +652,8 @@ h2.title_b {
     }
 
     .slide__text {
+        width      : 70%;
+        text-align : center;
         color      : #fff;
         font-size  : 32px;
         line-height: 48px;
@@ -513,7 +685,11 @@ h2.title_b {
 }
 
 .swiper-button-prev {
-    left: 91%;
+    left: calc(100% - 120px);
+}
+
+.swiper-button-next {
+    right: 0%;
 }
 
 
@@ -659,16 +835,19 @@ h2.title_b {
 .instagram-feed {
     max-width: $lg;
     margin   : 0 auto;
+    width    : 100%;
 
     .instagram-feed__info {
 
         max-width: $lp;
         margin   : 0 auto;
+        width    : 100%;
 
 
         .text_r {
             max-width    : 608px;
             margin-bottom: 48px;
+            width        : 100%;
 
         }
 
@@ -677,6 +856,7 @@ h2.title_b {
 
     &__slider {
         max-width    : $lp;
+        width        : 100%;
         margin       : 0 auto;
         margin-bottom: 80px;
         overflow     : hidden;
@@ -690,6 +870,7 @@ h2.title_b {
                 object-fit     : cover;
                 object-position: center;
                 max-width      : 296px;
+                width          : 100%;
                 min-height     : 463px;
                 margin-right   : 16px;
 
@@ -703,22 +884,20 @@ h2.title_b {
     background-color: $pc80;
     width           : 100%;
 
-
     &__wrapper {
         max-width      : $lp;
+        width          : 100%;
         padding        : 0 15px;
         margin         : 96px auto;
         display        : flex;
         flex-direction : row;
+        flex-wrap      : wrap;
         justify-content: space-between;
         position       : relative;
-
-
     }
 
     .footer__copyright {
         flex: 0 0 32%;
-
 
         .logo {
             margin-bottom: 24px;
@@ -727,7 +906,6 @@ h2.title_b {
         .text_r {
             margin-bottom: 90px;
             color        : #fff;
-
         }
     }
 

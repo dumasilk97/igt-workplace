@@ -1,4 +1,5 @@
 @import url(/css/fonts.css);
+@import url(/css/icon.css);
 .title_b {
   font-family: "Poppins-Bold";
   font-size: 64px;
@@ -86,6 +87,105 @@
   content: "\e907";
 }
 
+.menu-btn {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.menu-btn > span::before {
+  content: '';
+  top: -16px;
+}
+
+.menu-btn > span::after {
+  content: '';
+  top: 16px;
+}
+
+.menubox {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: -100%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #A30031;
+  -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  z-index: 10;
+}
+
+.menu-item {
+  display: block;
+  padding: 40px 24px;
+  width: 100% !important;
+  text-align: center;
+  color: #333;
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  font-family: "Poppins-Bold";
+}
+
+.menu-item:hover {
+  background-color: #CFD8DC;
+}
+
+#menu-toggle {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#menu-toggle:checked ~ .menu-btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#menu-toggle:checked ~ .menubox {
+  visibility: visible;
+  top: 0;
+}
+
 @media screen and (max-width: 1000px) {
   .about-us {
     -webkit-box-orient: vertical !important;
@@ -101,6 +201,64 @@
         grid-template-columns: 1fr 1fr !important;
     -ms-grid-rows: 1fr 1fr 1fr 1fr !important;
         grid-template-rows: 1fr 1fr 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__menu__list {
+    display: none !important;
+  }
+  .active::before {
+    border-bottom: transparent !important;
+  }
+  .swiper-wrapper {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    max-height: 770px;
+    margin-top: 60px !important;
+  }
+  .swiper__item {
+    height: 450px !important;
+  }
+  .swiper__item .slide__text {
+    font-size: 24px !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title_b {
+    font-size: 38px !important;
+    line-height: 44px !important;
+  }
+  .teacher__name {
+    font-size: 28px !important;
+    line-height: 34px !important;
+  }
+  .teachers-grid__item {
+    min-height: 280px !important;
+  }
+  .teachers-grid__item:hover .teacher__info {
+    top: 20% !important;
+  }
+  .teacher__info {
+    top: 60% !important;
+  }
+  .teacher__link,
+  .social-link {
+    margin: 0 2px !important;
+  }
+  .instagram-feed__item {
+    min-height: 360px !important;
   }
 }
 
@@ -474,6 +632,8 @@ h2.title_b {
 }
 
 .swiper__item .slide__text {
+  width: 70%;
+  text-align: center;
   color: #fff;
   font-size: 32px;
   line-height: 48px;
@@ -503,7 +663,11 @@ h2.title_b {
 }
 
 .swiper-button-prev {
-  left: 91%;
+  left: calc(100% - 120px);
+}
+
+.swiper-button-next {
+  right: 0%;
 }
 
 .teachers {
@@ -656,20 +820,24 @@ h2.title_b {
 .instagram-feed {
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .instagram-feed .instagram-feed__info {
   max-width: 1230px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .instagram-feed .instagram-feed__info .text_r {
   max-width: 608px;
   margin-bottom: 48px;
+  width: 100%;
 }
 
 .instagram-feed__slider {
   max-width: 1230px;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 80px;
   overflow: hidden;
@@ -687,6 +855,7 @@ h2.title_b {
   -o-object-position: center;
      object-position: center;
   max-width: 296px;
+  width: 100%;
   min-height: 463px;
   margin-right: 16px;
   background-color: #CCCCCC;
@@ -699,6 +868,7 @@ h2.title_b {
 
 .footer__wrapper {
   max-width: 1230px;
+  width: 100%;
   padding: 0 15px;
   margin: 96px auto;
   display: -webkit-box;
@@ -708,6 +878,8 @@ h2.title_b {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

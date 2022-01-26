@@ -21,7 +21,7 @@
     <header class="header">
         <div class="header__wrapper">
             <a href="#"><img src="/img/Logo.svg" alt="Иконка компании" class="logo"></a>
-            <div class="header__menu">
+            <div class="header__menu__list">
                 <a class="header__item text_sb active">Home</a>
                 <a href="#" class="header__item text_sb">Classes</a>
                 <a href="#" class="header__item text_sb">Program</a>
@@ -29,6 +29,20 @@
                 <a href="#" class="header__item text_sb">About</a>
             </div>
         </div>
+        <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+                <span></span>
+            </label>
+            <div class="header__menu menubox">
+                <a class="header__item menu-item  text_sb active">Home</a>
+                <a href="#" class="header__item menu-item  text_sb">Classes</a>
+                <a href="#" class="header__item menu-item  text_sb">Program</a>
+                <a href="#" class="header__item menu-item  text_sb">Teacher</a>
+                <a href="#" class="header__item menu-item  text_sb">About</a>
+            </div>
+        </div>
+    </div>
     </header>
 
     <section class="greetings-page">
@@ -106,7 +120,7 @@
                 <div class="swiper-slide swiper__item"><img src="/img/music.jpg" alt="музыка"><span
                         class="slide__text title_b">Music</span></div>
                 <div class="swiper-slide swiper__item"><img src="/img/outdoor.jpg" alt="Дизайн"><span
-                        class="slide__text title_b">Outdoor&Nature</span></div>
+                        class="slide__text title_b">Outdoors & Nature</span></div>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -235,7 +249,7 @@
         </div>
     </section>
 
-    <!-- <section class="instagram-feed">
+    <section class="instagram-feed">
         <div class="instagram-feed__info">
             <h3 class="title_b">
                 Crestview Instagram Feed
@@ -254,7 +268,7 @@
                 <img src="#" alt="" class="instagram-feed__item swiper-slide">
             </div>
         </div>
-    </section> -->
+    </section>
 
     <footer class="footer">
         <div class="footer__wrapper">
