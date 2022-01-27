@@ -15,6 +15,8 @@ $pc60    : #FF0A54;
 $pc40    : #FFA3BF;
 $pc20    : #FFD6E3;
 $overlay2: #E5E5E5;
+$bgc     : rgba($color: #000000, $alpha: 0.4);
+
 
 $title-c: #222F5D;
 $text-c : #79799B;
@@ -335,7 +337,7 @@ body {
 
 
 .header {
-    background-color: rgba($color: #000000, $alpha: 0.4);
+    background-color: $bgc;
 
     a {
         color      : #fff;
@@ -353,15 +355,8 @@ body {
 
 
         .logo {
-
             padding: 5px;
         }
-
-
-
-
-
-
     }
 
 }
@@ -374,12 +369,9 @@ body {
 
 
     &::before {
-        content      : '';
-        border-bottom: #fff solid;
-        width        : 100%;
-        height       : 2px;
-        position     : absolute;
-        top          : 92%;
+        content : '';
+        width   : 100%;
+        position: absolute;
     }
 
 }
@@ -932,7 +924,8 @@ h2.title_b {
             color        : #fff;
         }
     }
-    .footer__links{
+
+    .footer__links {
         margin-bottom: 50px;
     }
 
@@ -946,7 +939,7 @@ h2.title_b {
             font-size    : 16px;
             line-height  : 32px;
             margin-bottom: 8px;
-            display: list-item;
+            display      : list-item;
 
             a {
 
@@ -990,5 +983,171 @@ h2.title_b {
     bottom  : 0;
     color   : #fff;
 
+
+}
+
+
+// ================================================Classes
+
+.chapter {
+    background-color: $bgc;
+    width           : 100%;
+    min-height      : 340px;
+    margin-bottom   : 88px;
+
+    .chapter-wrapper {
+        max-width: $lp+30px;
+        padding  : 0 15px;
+        width    : 100%;
+        margin   : 0 auto;
+
+        h1 {
+            color: #fff;
+        }
+    }
+}
+
+.tab-container {
+    max-width: $lp+30px;
+    margin   : 0 auto;
+    padding  : 0 15px;
+
+
+    .title_b {
+        margin-bottom: 28px;
+    }
+
+    .work-time {
+        &__item {
+            font-size  : 16px;
+            line-height: 24px;
+
+
+            &:not(:first-child) {
+                border-left : 1px solid currentColor;
+                margin-left : 21px;
+                padding-left: 21px;
+            }
+        }
+
+        margin-bottom: 40px;
+    }
+
+    .tab {
+        width          : 100%;
+        min-height     : 458px;
+        display        : flex;
+        flex-direction : row;
+        justify-content: space-between;
+        margin-bottom  : 48px;
+
+
+        &__video {
+            max-width       : 66%;
+            width           : 100%;
+            background-color: $bgc;
+            object-fit      : contain;
+            border-radius   : 8px;
+            margin-right    : 16px;
+        }
+
+        .tab-list {
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-around;
+            max-width      : 33%;
+            width          : 100%;
+            border         : 1px solid #E1E1E1;
+            box-sizing     : border-box;
+
+            &__item {
+                width      : 100%;
+                padding    : 28px 8%;
+                font-size  : 24px;
+                line-height: 32px;
+                color      : $text-c;
+                position   : relative;
+
+
+
+            }
+
+            .active {
+                color           : #fff;
+                background-color: $pc60;
+
+                &::before {
+                    color: #fff !important;
+                }
+            }
+
+            .icon-Vector {
+                &::before {
+                    position : absolute;
+                    right    : 8%;
+                    top      : 50%;
+                    transform: translate(0, -50%);
+                    color    : $bgc;
+                }
+            }
+        }
+    }
+
+    .active {
+        color           : #fff;
+        background-color: $pc60;
+
+        .icon-Vector {
+
+            &::before {
+                color: #fff !important;
+            }
+        }
+    }
+
+    .tab-text {
+        &__item {
+            margin-bottom: 24px;
+        }
+
+        margin-bottom: 48px;
+    }
+
+
+}
+
+.swiper3 {
+    max-height: 242px;
+    max-width : $lp;
+    width     : 100%;
+    overflow  : hidden;
+    margin-bottom: 120px;
+
+}
+
+.tab-wrapper.swiper-wrapper {
+    max-height: 242px;
+}
+
+.tab-wrapper__item.swiper-slide {
+    max-width       : 24%;
+    width           : 100%;
+    height          : 100%;
+    background-color: $bgc;
+    margin-right    : 1%;
+    object-fit      : cover;
+    object-position : center;
+    border-radius   : 8px;
+}
+
+.tab-schedule{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    ul{
+        display: grid;
+        grid-template-rows: repeat(8, 1fr);
+    }
 
 }

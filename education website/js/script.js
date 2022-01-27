@@ -29,3 +29,18 @@ const swiper = new Swiper('.swiper', {
     
   
   });
+
+  const swiper3 = new Swiper('.swiper3', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // effect: 'slide', 
+    followFinger: 	true, 
+    // loopedSlides: 4, 
+    slidesPerView: 4,
+
+    grabCursor: true,
+   
+    
+  
+  });
