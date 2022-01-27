@@ -273,18 +273,20 @@ $mobile: 375px;
     }
 
 
-    .features{
-        &__info{
-            position: relative !important;
-            right: 0 !important;
-            bottom: 0!important;
+    .features {
+        &__info {
+            position     : relative !important;
+            right        : 0 !important;
+            bottom       : 0 !important;
             margin-bottom: 10px !important;
         }
     }
-    .features__imgs{
+
+    .features__imgs {
         display: none !important;
-        
+
     }
+
     .teacher__name {
         font-size  : 28px !important;
         line-height: 34px !important;
@@ -304,16 +306,12 @@ $mobile: 375px;
         top: 60% !important;
     }
 
-    .teacher__link,
-    .social-link {
-        margin: 0 2px !important;
-    }
 
     .instagram-feed__item {
         min-height: 360px !important;
     }
 
-    
+
 }
 
 p,
@@ -359,17 +357,7 @@ body {
             padding: 5px;
         }
 
-        .header__item {
-            color       : #fff;
-            display     : inline-block;
-            width       : fit-content;
-            margin-right: 56px;
 
-
-            &:last-child {
-                margin: 0;
-            }
-        }
 
 
 
@@ -378,19 +366,62 @@ body {
 
 }
 
-.active {
-    width   : fit-content;
-    cursor  : default;
-    position: relative;
+.header__item.active {
+    width          : fit-content;
+    cursor         : default;
+    position       : relative;
+    text-decoration: none;
 
 
     &::before {
         content      : '';
         border-bottom: #fff solid;
         width        : 100%;
-        height       : 100%;
+        height       : 2px;
         position     : absolute;
-        top          : 5px;
+        top          : 92%;
+    }
+
+}
+
+.menu-list__item {
+    color       : #fff;
+    width       : fit-content;
+    margin-right: 56px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    display          : inline-block;
+    vertical-align   : middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform        : perspective(1px) translateZ(0);
+    box-shadow       : 0 0 1px rgba(0, 0, 0, 0);
+    position         : relative;
+    overflow         : hidden;
+
+    &:before {
+        content                           : "";
+        position                          : absolute;
+        z-index                           : -1;
+        left                              : 0;
+        right                             : 100%;
+        bottom                            : 0;
+        background                        : currentColor;
+        height                            : 2px;
+        -webkit-transition-property       : right;
+        transition-property               : right;
+        -webkit-transition-duration       : 0.3s;
+        transition-duration               : 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function        : ease-out;
+    }
+
+    &:hover:before,
+    &:focus:before,
+    &:active:before {
+        right: 0;
     }
 
 }
@@ -472,10 +503,10 @@ body {
 
             }
 
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            img {
+                width          : 100%;
+                height         : 100%;
+                object-fit     : cover;
                 object-position: center;
             }
         }
@@ -613,8 +644,8 @@ h2.title_b {
 }
 
 .skills {
-    max-width: $lp;
-    width    : 100%;
+    max-width    : $lp;
+    width        : 100%;
     margin       : 0 auto;
     margin-bottom: 160px;
 
@@ -753,9 +784,9 @@ h2.title_b {
         }
 
         .teacher__info {
-            position: absolute;
-            height  : 38%;
-            width   : 100%;
+            position  : absolute;
+            height    : 38%;
+            width     : 100%;
             top       : 75%;
             left      : 50%;
             transform : translate(-50%, 0);
@@ -813,7 +844,7 @@ h2.title_b {
     background   : #FFFFFF;
     color        : $pc60;
     border-radius: 20px;
-    margin       : 0 8px;
+    margin       : 0 2px;
     font-size    : 16px;
     text-align   : center;
     line-height  : 40px;
@@ -901,6 +932,9 @@ h2.title_b {
             color        : #fff;
         }
     }
+    .footer__links{
+        margin-bottom: 50px;
+    }
 
     .footer-items {
         flex: 0 0 16%;
@@ -912,6 +946,7 @@ h2.title_b {
             font-size    : 16px;
             line-height  : 32px;
             margin-bottom: 8px;
+            display: list-item;
 
             a {
 

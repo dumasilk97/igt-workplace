@@ -262,10 +262,6 @@
   .teacher__info {
     top: 60% !important;
   }
-  .teacher__link,
-  .social-link {
-    margin: 0 2px !important;
-  }
   .instagram-feed__item {
     min-height: 360px !important;
   }
@@ -326,34 +322,63 @@ body {
   padding: 5px;
 }
 
-.header .header__wrapper .header__item {
-  color: #fff;
-  display: inline-block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-right: 56px;
-}
-
-.header .header__wrapper .header__item:last-child {
-  margin: 0;
-}
-
-.active {
+.header__item.active {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: default;
   position: relative;
+  text-decoration: none;
 }
 
-.active::before {
+.header__item.active::before {
   content: '';
   border-bottom: #fff solid;
   width: 100%;
-  height: 100%;
+  height: 2px;
   position: absolute;
-  top: 5px;
+  top: 92%;
+}
+
+.menu-list__item {
+  color: #fff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 56px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-list__item:last-child {
+  margin: 0;
+}
+
+.menu-list__item:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: currentColor;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.menu-list__item:hover:before, .menu-list__item:focus:before, .menu-list__item:active:before {
+  right: 0;
 }
 
 .greetings-page {
@@ -822,7 +847,7 @@ h2.title_b {
   background: #FFFFFF;
   color: #FF0A54;
   border-radius: 20px;
-  margin: 0 8px;
+  margin: 0 2px;
   font-size: 16px;
   text-align: center;
   line-height: 40px;
@@ -918,6 +943,10 @@ h2.title_b {
   color: #fff;
 }
 
+.footer .footer__links {
+  margin-bottom: 50px;
+}
+
 .footer .footer-items {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 16%;
@@ -931,6 +960,7 @@ h2.title_b {
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 8px;
+  display: list-item;
 }
 
 .footer .footer-items .footer__item a {
