@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="widli=device-widli, initial-scale=1.0">
     <link rel="stylesheet" href="/css/__normalize.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">
@@ -35,11 +35,11 @@
                         <span></span>
                     </label>
                     <div class="header__menu menubox">
-                        <a class="header__item menu-item  text_sb active">Home</a>
-                        <a href="#" class="header__item menu-item  text_sb">Classes</a>
-                        <a href="#" class="header__item menu-item  text_sb">Program</a>
-                        <a href="#" class="header__item menu-item  text_sb">Teacher</a>
-                        <a href="#" class="header__item menu-item  text_sb">About</a>
+                        <a href="index.html" class="header__item menu-item  text_sb ">Home</a>
+                        <a class="header__item menu-item active  text_sb">Classes</a>
+                        <a href="program.html" class="header__item menu-item  text_sb">Program</a>
+                        <a href="teacher.html" class="header__item menu-item  text_sb">Teacher</a>
+                        <a href="about.html" class="header__item menu-item  text_sb">About</a>
                     </div>
             </div>
         </div>
@@ -53,28 +53,131 @@
 
 
     <section class="tab-container">
-        <h2 class="title_b">Kindergarten</h2>
-        <div class="work-time">
-            <span class="work-time__item title_r">Monday - Friday</span>
-            <span class="work-time__item title_r">08:00 AM - 01.00 PM</span>
+        <div class="tab-name tabcontent Kinder">
+            <h2 class="title_b">Kindergarten</h2>
+            <div class="work-time">
+                <span class="work-time__item title_r">Monday - Friday</span>
+                <span class="work-time__item title_r">08:00 AM - 01.00 PM</span>
+            </div>
         </div>
-
-        <div class="tab">
-            <div class="tab__video"><video src="#"></video></div>
-            <div class="tab-list">
-                <a href="#" class="active title_sb tab-list__item"><span class="icon-Vector"></span> Kindergarten</a>
-                <a href="#" class="title_r tab-list__item"><span class="icon-Vector"></span>Junior school</a>
-                <a href="#" class="title_r tab-list__item"><span class="icon-Vector"></span>Middle school</a>
-                <a href="#" class="title_r tab-list__item"><span class="icon-Vector"></span>High school</a>
+        <div class="tab-name tabcontent Junior">
+            <h2 class="title_b">Junior school</h2>
+            <div class="work-time">
+                <span class="work-time__item title_r">Tuesday - Friday</span>
+                <span class="work-time__item title_r">08:00 AM - 03.00 PM</span>
+            </div>
+        </div>
+        <div class="tab-name tabcontent Middle">
+            <h2 class="title_b">Middle school</h2>
+            <div class="work-time">
+                <span class="work-time__item title_r">Monday - Friday</span>
+                <span class="work-time__item title_r">08:00 AM - 05.00 PM</span>
+            </div>
+        </div>
+        <div class="tab-name tabcontent High">
+            <h2 class="title_b">High school</h2>
+            <div class="work-time">
+                <span class="work-time__item title_r">Monday - Saturday</span>
+                <span class="work-time__item title_r">08:00 AM - 06.00 PM</span>
             </div>
         </div>
 
-        <div class="tab-text text_r">
-            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequatur ratione. Quibusdam minus eaque necessitatibus quae maxime quia itaque atque tenetur eveniet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quos, veniam facilis neque, laborum alias magnam ad iure est iste blanditiis ratione eveniet quas sed labore earum culpa in reiciendis!</p>
-            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo placeat delectus, inventore ea illum aut nulla aliquam minima voluptate distinctio cumque debitis, omnis reiciendis ipsum, nobis libero eveniet magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate alias possimus libero provident illo minima aspernatur, inventore eligendi iure placeat nostrum eveniet temporibus quos adipisci porro sed velit dicta magnam.</p>
+        <div class="tab">
+            <div class="tab__video tabcontent Kinder"><img src="img/Kinder.jpg"></img></div>
+            <div class="tab__video tabcontent Junior"><img src="img/junior.jpg"></img></div>
+            <div class="tab__video tabcontent Middle"><img src="img/middle.jpg"></img></div>
+            <div class="tab__video tabcontent High"><img src="img/senior.jpg"></img></div>
+            <div class="tab-list">
+
+
+                <button class="tablist__item title_r active" onclick="openSchool(event, 'Kinder')" >Kindergarten<span
+                    class="icon-Vector"></span></button>
+                <button class="tablist__item title_r" onclick="openSchool(event, 'Junior')">Junior school<span
+                    class="icon-Vector"></span></button>
+                <button class="tablist__item title_r" onclick="openSchool(event, 'Middle')">Middle school<span
+                    class="icon-Vector"></span></button>
+                <button class="tablist__item title_r" onclick="openSchool(event, 'High')">High
+                        school<span class="icon-Vector"></span></button>
+
+                <!-- <a href="#" class="title_sb tablist__item"><span class="icon-Vector"></span> Kindergarten</a>
+                <a href="#" class="title_r tablist__item"><span class="icon-Vector"></span>Junior school</a>
+                <a href="#" class="title_r tablist__item"><span class="icon-Vector"></span>Middle school</a>
+                <a href="#" class="title_r tablist__item"><span class="icon-Vector"></span>High school</a> -->
+            </div>
         </div>
 
-        <div class="tab-swiper swiper3">
+        <div class="tab-text text_r tabcontent Kinder">
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequatur
+                ratione. Quibusdam minus eaque necessitatibus quae maxime quia itaque atque tenetur eveniet! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Sint quos, veniam facilis neque, laborum alias magnam ad
+                iure est iste blanditiis ratione eveniet quas sed labore earum culpa in reiciendis!</p>
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo placeat
+                delectus, inventore ea illum aut nulla aliquam minima voluptate distinctio cumque debitis, omnis
+                reiciendis ipsum, nobis libero eveniet magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate alias possimus libero provident illo minima aspernatur, inventore eligendi iure placeat
+                noslium eveniet temporibus quos adipisci porro sed velit dicta magnam.</p>
+        </div>
+        <div class="tab-text text_r tabcontent Junior">
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequatur
+                ratione. Quibusdam minus eaque necessitatibus quae maxime quia itaque atque tenetur eveniet! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Sint quos, veniam facilis neque, laborum alias magnam ad
+                iure est iste blanditiis ratione eveniet quas sed labore earum culpa in reiciendis!</p>
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo placeat
+                delectus, inventore ea illum aut nulla aliquam minima voluptate distinctio cumque debitis, omnis
+                reiciendis ipsum, nobis libero eveniet magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate alias possimus libero provident illo minima aspernatur, inventore eligendi iure placeat
+                noslium eveniet temporibus quos adipisci porro sed velit dicta magnam.</p>
+        </div>
+        <div class="tab-text text_r tabcontent Middle">
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequatur
+                ratione. Quibusdam minus eaque necessitatibus quae maxime quia itaque atque tenetur eveniet! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Sint quos, veniam facilis neque, laborum alias magnam ad
+                iure est iste blanditiis ratione eveniet quas sed labore earum culpa in reiciendis!</p>
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo placeat
+                delectus, inventore ea illum aut nulla aliquam minima voluptate distinctio cumque debitis, omnis
+                reiciendis ipsum, nobis libero eveniet magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate alias possimus libero provident illo minima aspernatur, inventore eligendi iure placeat
+                noslium eveniet temporibus quos adipisci porro sed velit dicta magnam.</p>
+        </div>
+        <div class="tab-text text_r tabcontent High">
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, consequatur
+                ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui laboriosam, magni placeat
+                consequatur atque dicta accusantium quos dignissimos nisi saepe. Quibusdam minus eaque necessitatibus
+                quae maxime quia itaque atque tenetur eveniet! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Sint quos, veniam facilis neque, laborum alias magnam ad
+                iure est iste blanditiis ratione eveniet quas sed labore earum culpa in reiciendis!</p>
+            <p class="tab-text__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo placeat
+                delectus, inventore ea illum aut nulla aliquam minima voluptate distinctio cumque debitis, omnis
+                reiciendis ipsum, nobis libero eveniet magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate alias possimus libero provident illo minima aspernatur, inventore eligendi iure placeat
+                noslium eveniet temporibus quos adipisci porro sed velit dicta magnam.</p>
+        </div>
+
+        <div class="tab-swiper tabcontent swiper3 Kinder">
+            <div class="tab-wrapper swiper-wrapper">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+            </div>
+        </div>
+        <div class="tab-swiper tabcontent swiper4 Junior">
+            <div class="tab-wrapper swiper-wrapper">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+            </div>
+        </div>
+        <div class="tab-swiper tabcontent swiper5 Middle">
+            <div class="tab-wrapper swiper-wrapper">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+                <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
+            </div>
+        </div>
+        <div class="tab-swiper tabcontent swiper6 High">
             <div class="tab-wrapper swiper-wrapper">
                 <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
                 <img src="#" alt="Фото от школы" class=" tab-wrapper__item swiper-slide">
@@ -83,27 +186,106 @@
             </div>
         </div>
 
-        <h3 class="title_b">Schedule</h3>
-        <div class="tab-schedule">
-            <ul class="schedule__time"><span class="title_b">Time</span>
-                <li>8:00</li>
-                <li>8:30</li>
-                <li>9:30</li>
-                <li>10:45</li>
-                <li>11:45</li>
-                <li>12:30</li>
-                <li>01:00</li>
-            </ul>
-            <ul class="schedule__activity"><span class="title_b">Activity</span>
-                <li>Arrival of Parent Teachers </li>
-                <li>Settling in Games</li>
-                <li>Class Meeting</li>
-                <li>Reading Workshop</li>
-                <li>Lunch and Outside Play</li>
-                <li>Writing Workshop</li>
-                <li>Dismissal</li>
-            </ul>
+        <div class="tabcontent Kinder">
+            <h3 class="title_b">Schedule</h3>
+            <div class="tab-schedule">
+                <ul class="schedule__time">
+                    <li><span class="title_b">Time</span></li>
+                    <li>8:00</li>
+                    <li>8:30</li>
+                    <li>9:30</li>
+                    <li>10:45</li>
+                    <li>11:45</li>
+                    <li>12:30</li>
+                    <li>01:00</li>
+                </ul>
+                <ul class="schedule__activity">
+                    <li><span class="title_b">Activity</span></li>
+                    <li>Arrival of Parent Teachers </li>
+                    <li>Settling in Games</li>
+                    <li>Class Meeting</li>
+                    <li>Reading Workshop</li>
+                    <li>Lunch and Outside Play</li>
+                    <li>Writing Workshop</li>
+                    <li>Dismissal</li>
+                </ul>
+            </div>
         </div>
+       <div class="tabcontent Junior">
+            <h3 class="title_b">Schedule</h3>
+            <div class="tab-schedule">
+                <ul class="schedule__time">
+                    <li><span class="title_b">Time</span></li>
+                    <li>8:00</li>
+                    <li>8:30</li>
+                    <li>9:30</li>
+                    <li>10:45</li>
+                    <li>11:45</li>
+                    <li>12:30</li>
+                    <li>01:00</li>
+                </ul>
+                <ul class="schedule__activity">
+                    <li><span class="title_b">Activity</span></li>
+                    <li>Arrival of Parent Teachers </li>
+                    <li>Settling in Games</li>
+                    <li>Class Meeting</li>
+                    <li>Reading Workshop</li>
+                    <li>Lunch and Outside Play</li>
+                    <li>Writing Workshop</li>
+                    <li>Dismissal</li>
+                </ul>
+            </div>
+       </div>
+       <div class="tabcontent Middle">
+            <h3 class="title_b">Schedule</h3>
+            <div class="tab-schedule">
+                <ul class="schedule__time">
+                    <li><span class="title_b">Time</span></li>
+                    <li>8:00</li>
+                    <li>8:30</li>
+                    <li>9:30</li>
+                    <li>10:45</li>
+                    <li>11:45</li>
+                    <li>12:30</li>
+                    <li>01:00</li>
+                </ul>
+                <ul class="schedule__activity">
+                    <li><span class="title_b">Activity</span></li>
+                    <li>Arrival of Parent Teachers </li>
+                    <li>Settling in Games</li>
+                    <li>Class Meeting</li>
+                    <li>Reading Workshop</li>
+                    <li>Lunch and Outside Play</li>
+                    <li>Writing Workshop</li>
+                    <li>Dismissal</li>
+                </ul>
+            </div>
+       </div>
+       <div class="tabcontent High">
+            <h3 class="title_b">Schedule</h3>
+            <div class="tab-schedule">
+                <ul class="schedule__time">
+                    <li><span class="title_b">Time</span></li>
+                    <li>7:30</li>
+                    <li>8:30</li>
+                    <li>9:30</li>
+                    <li>10:45</li>
+                    <li>11:45</li>
+                    <li>12:30</li>
+                    <li>01:00</li>
+                </ul>
+                <ul class="schedule__activity">
+                    <li><span class="title_b">Activity</span></li>
+                    <li>Arrival of Parent Teachers </li>
+                    <li>Settling in Games</li>
+                    <li>Class Meeting</li>
+                    <li>Reading Workshop</li>
+                    <li>Lunch and Outside Play</li>
+                    <li>Writing Workshop</li>
+                    <li>Dismissal</li>
+                </ul>
+            </div>
+       </div>
     </section>
 
     <section class="contact-us">
@@ -111,14 +293,16 @@
             <div class="contact-us__item">
                 <h3 class="title_b">Enrol Now</h3>
                 <p class="text_r">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente fuga. Recusandae dolorum suscipit aut libero dolor, doloribus ad laudantium.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente fuga. Recusandae
+                    dolorum suscipit aut libero dolor, doloribus ad laudantium.
                 </p>
                 <a href="#" class="btn">More Information</a>
             </div>
             <div class="contact-us__item">
                 <h3 class="title_b">Contact us</h3>
                 <p class="text_r">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente fuga. Recusandae dolorum suscipit aut libero dolor, doloribus ad laudantium.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sapiente fuga. Recusandae
+                    dolorum suscipit aut libero dolor, doloribus ad laudantium.
                 </p>
                 <input type="button" value="Drop a message" id='modal-form' class="btn">
                 <label for="modal-form"></label>
@@ -152,7 +336,7 @@
             <div class="footer-contacts">
                 <p class="contacts title_b">Contact</p>
                 <a href="https://goo.gl/maps/XdPzjDtSWkXhP36q9" target="_blank" class="text_r adress "> <span
-                        class="icon-office"></span>8819 Ohio St. South
+                        class="icon-office"></span>8819 Ohio St. Souli
                     Gate, CA 90280</a>
                 <a href="tel:+13866883295" class="tel text_r"> <span class="icon-Phone"></span>+1 386-688-3295</a>
                 <a href="mailto:Ourstudio@hello.com" class="mail text_r"> <span
@@ -163,7 +347,7 @@
         </div>
     </footer>
 </body>
-<script src="js/swiper-bundle.min.js"></script>
+<script  src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 
 </html>
