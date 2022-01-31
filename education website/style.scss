@@ -1344,7 +1344,6 @@ h2.title_b {
 
     .title_b {
         font-size    : 48px;
-        margin-bottom: 40px;
         text-align   : center;
     }
 
@@ -1372,40 +1371,95 @@ h2.title_b {
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     margin-bottom: 160px;
 
-    &:nth-child(even){
-        &__img{
-            order: 1;
-        }
-        &__info{
-            order: 2;
-        }
-    }
-    &:nth-child(odd){
-        &__img{
-            order: 2;
-        }
-        &__info{
-            order: 1;
-        }
+
+    .title_b{
+        margin-bottom: 40px;
     }
     
+    
+    &:nth-child(even){
+        .page-item__img{
+            order: 2;
+        }
+        .page-item__info{
+            order: 1;
+        }
+    }
     
 
     &__img{
         flex: 0 1 48%;
         width: 100%;
-        margin-right: 20px;
+        max-height: 608px;
+        border-radius: 8px;
         background-color: $field-c;
+        order: 1;
     }
 
     &__info{
         flex: 0 1 45%;
+        width: 100%;
+        order: 2;
+
         .text_r{
             margin-bottom: 24px;
         }
     }
 }
     
+
+.library{
+    max-width: $lp + 30px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 160px;
+    position: relative;
+    .swiper7{
+        position: relative;
+        flex: 0 1 70%;
+        overflow: hidden;
+        
+        .swiper-wrapper{
+
+
+        }
+        
+        .swiper-slide{
+            background-color: $field-c;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+ 
+
+
+    &__info{
+        max-width: 695px;
+        width: 100%;
+        padding: 48px 56px;
+        background-color: #fff;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        right: -25%;
+
+        transform: translate(-30%,-50%);
+
+        .title_b{
+            margin-bottom: 40px;
+
+        }
+
+        .text_r{
+            margin-bottom: 24px;
+        }
+    }
+}

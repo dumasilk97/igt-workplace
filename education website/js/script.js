@@ -86,6 +86,22 @@ const swiper = new Swiper('.swiper', {
     
   
   });
+  const swiper7 = new Swiper('.swiper7', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // effect: 'slide', 
+    followFinger: 	true, 
+    // loopedSlides: 4, 
+    slidesPerView: 1,
+
+    grabCursor: true,
+   
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+  });
 
   var firstView = document.getElementsByClassName('Kinder'), count;
   for (count = 0; count < firstView.length; count++){
