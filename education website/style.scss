@@ -1279,12 +1279,12 @@ h2.title_b {
 
         img {
             flex            : 0 1 41%;
-            max-width: 41%;
-            width: 100%;
+            max-width       : 41%;
+            width           : 100%;
             background-color: $text-c;
             margin-right    : 20px;
-            object-fit: cover;
-            object-position: center;
+            object-fit      : cover;
+            object-position : center;
         }
 
 
@@ -1318,18 +1318,94 @@ h2.title_b {
             font-weight: normal;
             font-size  : 16px;
             line-height: 28px;
-            color: $title-c;
+            color      : $title-c;
 
-            
+
         }
 
-        .guru__links{
+        .guru__links {
             margin-top: 48px;
-            .teacher__link{
-                color: $pc60;
+
+            .teacher__link {
+                color           : $pc60;
                 background-color: $pc20;
             }
         }
     }
 
 }
+
+.education {
+    max-width : $lp +30px;
+    padding   : 0 15px;
+    margin    : 0 auto;
+    margin-top: 88px;
+    margin-bottom: 160px;
+
+    .title_b {
+        font-size    : 48px;
+        margin-bottom: 40px;
+        text-align   : center;
+    }
+
+    .text_r {
+        font-size  : 16px;
+        line-height: 28px;
+        text-align : center;
+        color      : #79799B;
+        margin-bottom: 40px;
+    }
+
+    &__video {
+        background-color: $text-c;
+        width           : 100%;
+        max-height: 633px;
+
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.page-item{
+    max-width: $lp+30px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 160px;
+
+    &:nth-child(even){
+        &__img{
+            order: 1;
+        }
+        &__info{
+            order: 2;
+        }
+    }
+    &:nth-child(odd){
+        &__img{
+            order: 2;
+        }
+        &__info{
+            order: 1;
+        }
+    }
+    
+    
+
+    &__img{
+        flex: 0 1 48%;
+        width: 100%;
+        margin-right: 20px;
+        background-color: $field-c;
+    }
+
+    &__info{
+        flex: 0 1 45%;
+        .text_r{
+            margin-bottom: 24px;
+        }
+    }
+}
+    
