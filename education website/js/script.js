@@ -109,6 +109,7 @@ const swiper = new Swiper('.swiper', {
   }
 
 
+
   function openSchool(evt, schoolName) {
     // Declare all variables
     var i, tabcontent, tablist__item, tabId;
