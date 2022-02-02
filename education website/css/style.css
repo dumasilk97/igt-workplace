@@ -196,6 +196,15 @@
   section.about-us img.about-us__img {
     width: 100%;
   }
+  div.library {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.library__info {
+    position: static;
+  }
   div.teachers-grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -218,6 +227,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  h3.title_b {
+    font-size: 32px;
+    line-height: 42px;
+  }
   .menu-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -296,6 +309,48 @@
   .tab-schedule ul.schedule__activity li,
   .tab-schedule ul.schedule__time li {
     font-size: 16px;
+  }
+  div.page-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.page-item img.page-item__img {
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
+    margin-bottom: 20px;
+  }
+  .library__img.swiper-slide {
+    min-height: 400px;
+  }
+  div.library__info {
+    padding: 0 15px;
+  }
+  div.swiper7 {
+    margin-bottom: 20px;
+  }
+  a.menu-item {
+    font-size: 24px;
+    padding: 20px;
+  }
+  div.guru__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  div.guru__item img {
+    max-width: none;
+  }
+  div.guru__info {
+    max-width: none;
+    width: 100%;
+  }
+  div.guru__info h3.title_b {
+    margin-top: 20px;
   }
 }
 
@@ -1411,6 +1466,7 @@ h2.title_b {
 .education .title_b {
   font-size: 48px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .education .text_r {
@@ -1424,8 +1480,6 @@ h2.title_b {
 .education__video {
   background-color: #79799B;
   width: 100%;
-  max-height: 633px;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1463,6 +1517,14 @@ h2.title_b {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  padding-right: 15px;
+}
+
+.page-item:nth-child(odd) .page-item__img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-right: 15px;
 }
 
 .page-item__img {
@@ -1470,6 +1532,7 @@ h2.title_b {
       -ms-flex: 0 1 48%;
           flex: 0 1 48%;
   width: 100%;
+  min-height: 400px;
   border-radius: 8px;
   background-color: #CCCCCC;
   -webkit-box-ordinal-group: 2;
@@ -1493,6 +1556,7 @@ h2.title_b {
 
 .library {
   max-width: 1260px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
   display: -webkit-box;
@@ -1530,10 +1594,8 @@ h2.title_b {
   background-color: #fff;
   position: absolute;
   z-index: 2;
-  top: 50%;
-  right: -25%;
-  -webkit-transform: translate(-30%, -50%);
-          transform: translate(-30%, -50%);
+  top: 8vh;
+  right: -3vw;
 }
 
 .library__info .title_b {

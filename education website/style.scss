@@ -211,6 +211,15 @@ $mobile  : 425px;
 
     }
 
+    div.library{
+        flex-direction: column;
+
+        &__info{
+            position: static;
+
+        }
+    }
+
 
     div.teachers-grid {
         grid-template-columns: 1fr 1fr;
@@ -233,6 +242,10 @@ $mobile  : 425px;
 
 @media screen and (max-width: $tablet) {
     .header__wrapper {}
+    h3.title_b{
+        font-size: 32px;
+        line-height: 42px;
+    }
 
     .menu-btn {
         display : flex;
@@ -282,6 +295,8 @@ $mobile  : 425px;
                 margin-bottom: 60px;
             }
         }
+    }
+    div.page-item{
     }
 }
 
@@ -335,6 +350,44 @@ $mobile  : 425px;
     .tab-schedule ul.schedule__activity li,
     .tab-schedule ul.schedule__time li {
         font-size: 16px;
+    }
+
+    div.page-item{
+        flex-direction: column;
+
+        img.page-item__img{
+            order: 1 !important;
+            margin-bottom: 20px;
+        }
+    }
+    .library__img.swiper-slide{
+        min-height: 400px;
+    }
+    div.library__info{
+        padding: 0 15px;
+    }
+    div.swiper7{
+        margin-bottom: 20px;
+    }
+    a.menu-item{
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    div.guru__item{
+        flex-direction: column;
+        width: 100%;
+
+        img{
+            max-width: none;
+        }
+    }
+    div.guru__info{
+        max-width: none;
+        width: 100%;
+        h3.title_b{
+            margin-top: 20px;
+        }
     }
 }
 
@@ -1305,6 +1358,7 @@ h2.title_b {
     .title_b {
         font-size : 48px;
         text-align: center;
+        margin-bottom: 40px;
     }
 
     .text_r {
@@ -1318,8 +1372,6 @@ h2.title_b {
     &__video {
         background-color: $text-c;
         width           : 100%;
-        max-height      : 633px;
-        height          : 100%;
         object-fit      : cover;
         object-position : center;
     }
@@ -1339,18 +1391,29 @@ h2.title_b {
     }
 
     &:nth-child(even) {
+
+    
         .page-item__img {
             order: 2;
         }
 
         .page-item__info {
             order: 1;
+            padding-right: 15px;
         }
     }
+    &:nth-child(odd) {
 
+    
+        .page-item__img {
+            order: 2;
+            margin-right: 15px;
+        }
+    }
     &__img {
         flex            : 0 1 48%;
         width           : 100%;
+        min-height: 400px;
         border-radius   : 8px;
         background-color: $field-c;
         order           : 1;
@@ -1369,6 +1432,7 @@ h2.title_b {
 
 .library {
     max-width      : $lp + 30px;
+    width: 100%;
     margin         : 0 auto;
     padding        : 0 15px;
     display        : flex;
@@ -1398,9 +1462,9 @@ h2.title_b {
         background-color: #fff;
         position        : absolute;
         z-index         : 2;
-        top             : 50%;
-        right           : -25%;
-        transform       : translate(-30%, -50%);
+        top             : 8vh;
+        right           : -3vw;
+        // transform       : translate(-30%, -50%);
 
         .title_b {
             margin-bottom: 40px;
