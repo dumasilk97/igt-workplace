@@ -211,10 +211,10 @@ $mobile  : 425px;
 
     }
 
-    div.library{
+    div.library {
         flex-direction: column;
 
-        &__info{
+        &__info {
             position: static;
 
         }
@@ -242,8 +242,10 @@ $mobile  : 425px;
 
 @media screen and (max-width: $tablet) {
     .header__wrapper {}
-    h3.title_b{
-        font-size: 32px;
+
+    h3.title_b {
+        margin: 40px 0;
+        font-size  : 32px;
         line-height: 42px;
     }
 
@@ -286,17 +288,57 @@ $mobile  : 425px;
 
         &__container {
             flex-direction: column;
-
+            margin: 0;
         }
+
         &__item {
-            max-width    : 70%;
-            &:not(:last-child){
+            max-width: 70%;
+
+            &:not(:last-child) {
 
                 margin-bottom: 60px;
             }
         }
     }
-    div.page-item{
+
+    div.page-item {
+        flex-direction: column;
+
+        img.page-item__img {
+            order        : 1 !important;
+            margin-bottom: 20px;
+            min-height: 400px;
+            height: 100%;
+        }
+    }
+
+    div.guru__item {
+        flex-direction: column;
+        width         : 100%;
+
+        img {
+            max-width: none;
+        }
+    }
+
+    div.guru__info {
+        max-width: none;
+        width    : 100%;
+
+        h3.title_b {
+            margin-top: 20px;
+        }
+    }
+
+    div.our-story__container{
+        flex-direction: column;
+    }
+    div.our-story__item:first-child{
+        margin-bottom: 40px;
+    }
+    
+    div.achievements__item{
+        flex: 0 1 50%;
     }
 }
 
@@ -352,43 +394,29 @@ $mobile  : 425px;
         font-size: 16px;
     }
 
-    div.page-item{
-        flex-direction: column;
 
-        img.page-item__img{
-            order: 1 !important;
-            margin-bottom: 20px;
-        }
-    }
-    .library__img.swiper-slide{
+    .library__img.swiper-slide {
         min-height: 400px;
     }
-    div.library__info{
+
+    div.library__info {
         padding: 0 15px;
     }
-    div.swiper7{
+
+    div.swiper7 {
         margin-bottom: 20px;
     }
-    a.menu-item{
+
+    a.menu-item {
         font-size: 24px;
-        padding: 20px;
+        padding  : 20px;
     }
 
-    div.guru__item{
-        flex-direction: column;
-        width: 100%;
+    .achievements div.achievements-container{
+        justify-content: center;
+    }
 
-        img{
-            max-width: none;
-        }
-    }
-    div.guru__info{
-        max-width: none;
-        width: 100%;
-        h3.title_b{
-            margin-top: 20px;
-        }
-    }
+
 }
 
 p,
@@ -1356,8 +1384,8 @@ h2.title_b {
     margin-bottom: 160px;
 
     .title_b {
-        font-size : 48px;
-        text-align: center;
+        font-size    : 48px;
+        text-align   : center;
         margin-bottom: 40px;
     }
 
@@ -1392,28 +1420,29 @@ h2.title_b {
 
     &:nth-child(even) {
 
-    
+
         .page-item__img {
             order: 2;
         }
 
         .page-item__info {
-            order: 1;
+            order        : 1;
             padding-right: 15px;
         }
     }
+
     &:nth-child(odd) {
 
-    
+
         .page-item__img {
-            order: 2;
+            order       : 2;
             margin-right: 15px;
         }
     }
+
     &__img {
         flex            : 0 1 48%;
         width           : 100%;
-        min-height: 400px;
         border-radius   : 8px;
         background-color: $field-c;
         order           : 1;
@@ -1432,7 +1461,7 @@ h2.title_b {
 
 .library {
     max-width      : $lp + 30px;
-    width: 100%;
+    width          : 100%;
     margin         : 0 auto;
     padding        : 0 15px;
     display        : flex;
@@ -1456,14 +1485,14 @@ h2.title_b {
     }
 
     &__info {
-        max-width       : 695px;
-        width           : 100%;
-        padding         : 48px 56px;
-        background-color: #fff;
-        position        : absolute;
-        z-index         : 2;
-        top             : 8vh;
-        right           : -3vw;
+        max-width          : 695px;
+        width              : 100%;
+        padding            : 48px 56px;
+        background-color   : #fff;
+        position           : absolute;
+        z-index            : 2;
+        top                : 8vh;
+        right              : -3vw;
         // transform       : translate(-30%, -50%);
 
         .title_b {
@@ -1479,7 +1508,6 @@ h2.title_b {
 .achievements {
     background-color: $bgc;
     width           : 100%;
-    min-height      : 424px;
     margin-bottom   : 160px;
 
     .achievements-container {
@@ -1529,28 +1557,36 @@ h2.title_b {
     max-width            : $lp + 30px;
     padding              : 0 15px;
     margin               : 0 auto;
-    display              : grid;
-    gap                  : 56px 64px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows   : 690px 1fr;
     margin-bottom        : 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
 
     &__video {
         object-fit       : cover;
         object-position  : center;
         width            : 100%;
         height           : 100%;
-        grid-row-start   : 1;
-        grid-row-end     : 2;
-        grid-column-start: 1;
-        grid-column-end  : 3;
         background-color : $bgc;
+        margin-bottom: 56px;
+
     }
 
     &__item {
+        &:not(:last-child){
+            margin-right: 64px;
+        }
         .title_b {
             margin-bottom: 32px;
         }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 }
 
@@ -1571,6 +1607,7 @@ h2.title_b {
         margin : 0 auto;
         width  : fit-content;
         display: block;
+        margin-bottom: 160px;
     }
 }
 
