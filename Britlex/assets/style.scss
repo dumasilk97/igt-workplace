@@ -1,0 +1,35 @@
+@import url(../css/fonts.css);
+$pop_r : 'Poppins-Regular';
+$pop_b : 'Poppins-Bold';
+$pop_sb: 'Poppins-SemiBold';
+$blacked: #263238;
+
+.text_r {
+    font-family: $pop_r;
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 24px;
+    line-height: 36px;
+    color      : #8F95A5;
+}
+
+.title_b {
+    font-family: $pop_b;
+    font-style : normal;
+    font-weight: 600;
+    font-size  : 64px;
+    line-height: 80px;
+    color: #000000;
+}
+.title_sb {
+    font-family: $pop_sb;
+    font-style : normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 80px;
+    color: #000000;
+}
+
+.btn-dark{
+    background-color: $blacked;
+}
