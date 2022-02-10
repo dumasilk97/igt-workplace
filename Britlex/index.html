@@ -5,194 +5,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/__normalize.css">
+    <link rel="stylesheet" href="css/burger-menu.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Britlex</title>
 </head>
 
 <body>
-    <header class="header container-xxl">
-        <nav class="navbar navbar-expand-md navbar-light bg-light ">
-            <div class="d-flex flex-row justify-content-between container-md">
-                <a class="navbar-brand" href="#"><span>Brit</span>lex</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contacts</a>
-                        </li>
-                        <li class="nav-item">
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-outline-dark">Lets Talk</button>
-                </div>
-            </div>
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <p class="text_r"><strong>Brit</strong>lex</p>
+        </a>
+        <nav class="header__menu">
+            <a href="#" class="menu_item text_r current_page_item ">Home</a>
+            <a href="#" class="menu_item text_r">Skills</a>
+            <a href="#" class="menu_item text_r">About Us</a>
+            <a href="#" class="menu_item text_r">Pricing</a>
+            <a href="#" class="menu_item text_r">Contacts</a>
         </nav>
+        <div class="hamburger-menu" style="display: none;">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <a href="#" class="menu_item text_r current_page_item ">Home</a>
+                <a href="#" class="menu_item text_r">Skills</a>
+                <a href="#" class="menu_item text_r">About Us</a>
+                <a href="#" class="menu_item text_r">Pricing</a>
+                <a href="#" class="menu_item text_r">Contacts</a>
+            </ul>
+        </div>
+        <button class="header__btn text_r">Let’s Talk</button>
     </header>
 
-
-    <section class="get-started container-xxl  d-flex flex-row justify-content-between ">
-        <div class="get-started__item d-flex flex-column justify-content-between" >
-           <div class="d-flex flex-row justify-content-between">
-                <h1 class="title_b col-9">
-                    Learn Any Foreign Language
-                </h1>
-                <img src="assets/img/light.svg" alt="light" class="col-3">
-           </div>
-            <p class="text_r">
-                With our teachers who write a program for each student, you will be able to make your first sketch after
-                the first lesson.
-            </p>
-            <button type="button" class="btn-lg btn-dark col-9">Get started</button>
+    <section class="get-started">
+        <div class="get-started__info">
+            <div class="get-started__title">
+                <h1 class="title_sb">Learn <br> Any Foreign Language</h1>
+                <img src="assets/img/light.svg" alt="">
+            </div>
+            <p class="text_r">With our teachers who write a program for each student, you will be able to make your
+                first sketch after the first lesson.</p>
+            <button class="btn">get started</button>
         </div>
-        <img src="/assets/img/bro.svg" alt="your bro" class="right-img">
+        <img class="get-started__img" src="assets/img/bro.svg">
     </section>
-
-
-    <section class=" container-xxl">
-        <h3 class="title_sb text-center">Skills</h3>
-        <div class="d-grid  ">
-            <div class="skills__item">
+    <section class="skills">
+        <h2 class="title_sb">skills</h2>
+        <div class="skills-list">
+            <div class="skills-list__item">
                 <img src="assets/img/speaking.svg" alt="speaking">
-                <h3 class="title_s">Speaking</h3>
-                <p class="text_r">
-                    Improve your English skills and confidence.
-                    Live classes and interactive lessons online.
-                    20% extra free for a limited time only
-                    Learn English online and improve your
-                    skills through our high-quality courses
-                    and resources – all designed for adult language learners.
-                </p>
-                <button type="button" class="btn btn-dark">Learn more</button>
+                <h3 class="title_sb">Speaking</h3>
+                <p class="text_r">Improve your English skills and confidence. Live classes and interactive lessons
+                    online. 20% extra free for a limited time only Learn English online and improve your skills through
+                    our high-quality courses and resources – all designed for adult language learners.</p>
+                <button class="btn">Learn more</button>
             </div>
-            <div class="skills__item">
-                <img src="assets/img/writing.svg" alt="Writing">
-                <h3 class="title_s">Writing</h3>
-                <p class="text_r">
-                    One of the most important and extensive
-                    areas of natural science, the science that
-                    studies substances, also their composition
+            <div class="skills-list__item">
+                <img src="assets/img/writing.svg" alt="writing">
+                <h3 class="title_sb">Writing</h3>
+                <p class="text_r">One of the most important and extensive areas of natural science, he science that
+                    studies substances, also their composition .
                 </p>
-                <button type="button" class="btn btn-dark">Learn more</button>
+                <button class="btn">Learn more</button>
             </div>
-            <div class="skills__item">
-                <img src="assets/img/reading.svg" alt="Reading">
-                <h3 class="title_s">Reading</h3>
-                <p class="text_r">
-                    perception and response actions of the user
-                    resulting from the use and/or upcoming use
+            <div class="skills-list__item">
+                <img src="assets/img/reading.svg" alt="reading">
+                <h3 class="title_sb">Reading</h3>
+                <p class="text_r">perception and response actions of the user resulting from the use and/or upcoming use
                     of the product, system or service
                 </p>
-                <button type="button" class="btn btn-dark">Learn more</button>
+                <button class="btn">Learn more</button>
             </div>
-            <div class="skills__item">
-                <img src="assets/img/listening.svg" alt="Listening">
-                <h3 class="title_s">Listening</h3>
-                <p class="text_r">
-                    Here you can find activities to practise
-                    your listening skills. Listening will help you
-                    to improve your understanding
-                </p>
-                <button type="button" class="btn btn-dark">Learn more</button>
+            <div class="skills-list__item">
+               <div>
+                   <h3 class="title_sb">Listening</h3>
+                   <p class="text_r">Here you can find activities to practise
+                       your listening skills. Listening will help you
+                       to improve your understanding
+                    </p>
+                    <button class="btn">Learn more</button>
+                </div>
+                <img src="assets/img/listening.svg" alt="listening">
             </div>
         </div>
     </section>
-
-
     <section class="about-us">
-        <div class="about-us__item ">
-            <h3 class="title_sb">About Us</h3>
+        <div class="about-us__info">
+            <h2 class="title_b">About Us</h2>
             <p class="text_r">The model offers a framework for discussing problems related to the user's experience, as
-                well as possible ways and means of solving them. Application development begins at the top level
-                (strategy), where the future software product is described quite abstractly from the point of view of
-                the expectations of both users and the customer.
+                well
+                as possible ways and means of solving them. Application development begins at the top level (strategy),
+                where the future software product is described quite abstractly from the point of view of the
+                expectations
+                of both users and the customer.
             </p>
-            <ul class="about-us__wrapper">
-                <li><span>800</span>
-                    <p>pupils</p>
+            <ul class="achievements">
+                <li class="achievements__item">
+                    800 <span>pupils</span>
                 </li>
-                <li><span>18</span>
-                    <p>teachers</p>
+                <li class="achievements__item">
+                    18 <span>teachers</span>
                 </li>
-                <li><span>6</span>
-                    <p>Foreign languages</p>
+                <li class="achievements__item">
+                    6 <span>Foreign languages</span>
                 </li>
             </ul>
         </div>
-        <img src="assets/img/montain.svg" alt="montain">
+        <img src="assets/img/montain.svg" alt="montain" class="about-us__img">
     </section>
-
-
     <section class="pricing">
-        <h3 class="titlt_sb">pricing</h3>
-        <div class="pricing__container">
-            <div class="pricing__item">
+        <div class="pricing-list">
+            <h2 class="title_b">pricing</h2>
+            <div class="prising-list__item">
                 <img src="assets/img/self-study.svg" alt="self-study">
-                <h3 class="title_s">Self-study online course</h3>
-                <p class="text_r">
-                    Start learning English online in live classes
-                    with qualified EC teachers and students
+                <h3 class="title_sb">Self-study online course</h3>
+                <p class="text_r">Start learning English online in live classes with qualified EC eachers and students
                     from all over the world.
                 </p>
-                <p class="price"><span> £5.99</span> per month</p>
+                <p class="price">
+                    <span> £5.99</span> per month
+                </p>
             </div>
-            <div class="pricing__item">
+            <div class="prising-list__item">
                 <img src="assets/img/live-online.svg" alt="live-online">
-                <h3 class="title_s">Live online classes</h3>
-                <p class="text_r">
-                    Interactive group classes with expert
+                <h3 class="title_sb">Live online classes</h3>
+                <p class="text_r">Interactive group classes with expert
                     teachers. Free 7-day trial
                 </p>
-                <p class="price"><span>  £12.99</span> per month</p>
-            </div>
-            <div class="pricing__item">
-                <img src="assets/img/webinar.svg" alt="webinar">
-                <h3 class="title_s">Personal Tuition</h3>
-                <p class="text_r">
-                    Online one-to-one English tutoring – enjoy
-                    our first session for only $1
+                <p class="price">
+                    <span> £12.99</span> per month
                 </p>
-                <p class="price"><span>  £20.99</span> per month</p>
+            </div>
+            <div class="prising-list__item">
+                <img src="assets/img/webinar.svg" alt="self-study">
+                <h3 class="title_sb">Personal Tuition</h3>
+                <p class="text_r">Start learning English online in live classes with qualified EC eachers and students
+                    from all over the world.
+                </p>
+                <p class="price">
+                    <span> £20.99</span> per month
+                </p>
             </div>
         </div>
     </section>
-
     <section class="contact-us">
-        <img src="assets/img/plane.svg" alt="plane">
-        <div class="contact-us__item">
-            <h3 class="title_sb">Contact Us</h3>
-            <p class="text_r">Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resources</p>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Enter Your E-mail" aria-label="Enter Your E-mail" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary btn-dark" type="button" id="button-addon2">Subscribe</button>
-              </div>
-        </div>
+        <img src="assets/img/plane.svg" alt="contact-us" class="contact-us__img">
+        <form action=""></form>
     </section>
 
-    <footer class="footer">
-        <a class="navbar-brand" href="#"><span>Brit</span>lex</a>
-        <div class="footer__links">
-            <a href="#" class="">Terms and Conditions</a>
-            <a href="#" class="">Privacy Policy</a>
-            <a href="#" class=""> Cookie Policy</a>
-        </div>
-    </footer>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
