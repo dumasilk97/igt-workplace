@@ -75,6 +75,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 38px;
 }
 
 .header__logo p {
@@ -117,9 +118,10 @@ h2.title_sb {
   line-height: 80px;
   text-transform: capitalize;
   text-align: center;
+  margin-bottom: 91px;
 }
 
-h3.title_b {
+h3.title_sb {
   font-weight: 600;
   font-size: 30px;
   text-transform: capitalize;
@@ -242,6 +244,12 @@ h3.title_b {
           justify-content: first baseline;
   background-color: #F5F5F5;
   padding: 5% 10%;
+  border-radius: 10px;
+}
+
+.skills .skills-list__item .text_r {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .skills .skills-list__item:first-child {
@@ -276,4 +284,8 @@ h3.title_b {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.skills .skills-list__item .btn {
+  width: 70%;
 }

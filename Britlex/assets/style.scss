@@ -76,6 +76,7 @@ body {
     justify-content: space-between;
     min-height     : 145px;
     align-items    : center;
+    margin-bottom  : 38px;
 
     &__logo {
         p {
@@ -122,10 +123,10 @@ h2.title_sb {
     line-height   : 80px;
     text-transform: capitalize;
     text-align    : center;
-
+    margin-bottom : 91px;
 }
 
-h3.title_b {
+h3.title_sb {
     font-weight   : 600;
     font-size     : 30px;
     text-transform: capitalize;
@@ -204,38 +205,52 @@ h3.title_b {
 
     }
 
-    .skills-list{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        grid-template-rows: 1fr 1fr;
-        gap: 18px;
-        &__item{
-            display: flex;
-            flex-direction: column;
-            justify-content: first baseline;
+    .skills-list {
+        display              : grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows   : 1fr 1fr;
+        gap                  : 18px;
+
+        &__item {
+
+            display         : flex;
+            flex-direction  : column;
+            justify-content : first baseline;
             background-color: $card-color;
-            padding: 5% 10%;
+            padding         : 5% 10%;
+            border-radius   : 10px;
 
-
-            &:first-child{
-                grid-row-start: 1;
-                grid-row-end: 3;
-                grid-column-start: 1;
-                grid-column-end: 2;
+            .text_r {
+                font-size  : 16px;
+                line-height: 24px;
             }
-            &:last-child{
-                grid-row-start: 2;
-                grid-row-end: 3;
+
+
+            &:first-child {
+                grid-row-start   : 1;
+                grid-row-end     : 3;
+                grid-column-start: 1;
+                grid-column-end  : 2;
+            }
+
+            &:last-child {
+                grid-row-start   : 2;
+                grid-row-end     : 3;
                 grid-column-start: 2;
-                grid-column-end: 4;
-                display: flex;
-                flex-direction: row;
-                img{
-                    max-width: 382px;
-                    width: 100%;
-                    height: auto;
+                grid-column-end  : 4;
+                display          : flex;
+                flex-direction   : row;
+
+                img {
+                    max-width  : 382px;
+                    width      : 100%;
+                    height     : auto;
                     align-items: center;
                 }
+            }
+
+            .btn{
+                width: 70%;
             }
         }
     }
