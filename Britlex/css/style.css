@@ -5,7 +5,6 @@
   font-size: 24px;
   line-height: 36px;
   color: #8F95A5;
-  text-transform: capitalize;
   margin-bottom: 36px;
 }
 
@@ -14,7 +13,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
+  line-height: 76px;
   color: #000000;
   text-transform: capitalize;
 }
@@ -24,7 +23,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
-  line-height: 80px;
+  line-height: 60px;
   color: #000000;
   text-transform: capitalize;
   margin-bottom: 27px;
@@ -108,24 +107,23 @@ body {
 h1.title_sb {
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
+  line-height: 76px;
   text-transform: capitalize;
 }
 
 h2.title_sb {
   font-weight: 600;
   font-size: 48px;
-  line-height: 80px;
+  line-height: 60px;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: 91px;
 }
 
 h3.title_sb {
   font-weight: 600;
   font-size: 30px;
   text-transform: capitalize;
-  line-height: 80px;
+  line-height: 42px;
 }
 
 .get-started {
@@ -217,6 +215,10 @@ h3.title_sb {
   text-transform: capitalize;
 }
 
+.skills {
+  margin-bottom: 282px;
+}
+
 .skills h1.title_sb {
   margin-bottom: 92px;
 }
@@ -226,8 +228,8 @@ h3.title_sb {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: 1fr minmax(343px, 1fr);
+      grid-template-rows: 1fr minmax(343px, 1fr);
   gap: 18px;
 }
 
@@ -245,11 +247,22 @@ h3.title_sb {
   background-color: #F5F5F5;
   padding: 5% 10%;
   border-radius: 10px;
+  min-height: 531px;
 }
 
 .skills .skills-list__item .text_r {
   font-size: 16px;
   line-height: 24px;
+}
+
+.skills .skills-list__item img {
+  margin-bottom: 34px;
+}
+
+.skills .skills-list__item:nth-child(2) img {
+  width: 80%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .skills .skills-list__item:first-child {
@@ -275,17 +288,116 @@ h3.title_sb {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  height: 343px;
 }
 
 .skills .skills-list__item:last-child img {
   max-width: 382px;
   width: 100%;
-  height: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0;
+  width: 382px;
+  height: 255px;
 }
 
 .skills .skills-list__item .btn {
   width: 70%;
+}
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+  margin-bottom: 222px;
+}
+
+.about-us__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.about-us__info .title_sb {
+  text-align: left;
+}
+
+.about-us img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.about-us .achievements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-us .achievements__item {
+  font-family: "Poppins-SemiBold";
+  font-size: 48px;
+  line-height: 80px;
+  font-weight: 600;
+  color: #2A3246;
+  text-align: center;
+}
+
+.about-us .achievements__item p {
+  font-family: "Poppins-SemiBold";
+  font-size: 20px;
+  line-height: 30px;
+  color: #8F95A5;
+}
+
+.pricing h2 {
+  text-align: center;
+  margin-bottom: 83px;
+}
+
+.pricing .pricing-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pricing .pricing-list__item {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pricing .pricing-list__item img {
+  height: 283px;
 }

@@ -15,14 +15,13 @@ $xl: 1200px;
 $lp: 1340px;
 
 .text_r {
-    font-family   : $pop_r;
-    font-style    : normal;
-    font-weight   : normal;
-    font-size     : 24px;
-    line-height   : 36px;
-    color         : #8F95A5;
-    text-transform: capitalize;
-    margin-bottom : 36px;
+    font-family  : $pop_r;
+    font-style   : normal;
+    font-weight  : normal;
+    font-size    : 24px;
+    line-height  : 36px;
+    color        : #8F95A5;
+    margin-bottom: 36px;
 }
 
 .title_b {
@@ -30,7 +29,7 @@ $lp: 1340px;
     font-style    : normal;
     font-weight   : 600;
     font-size     : 64px;
-    line-height   : 80px;
+    line-height   : 76px;
     color         : #000000;
     text-transform: capitalize;
 }
@@ -40,7 +39,7 @@ $lp: 1340px;
     font-style    : normal;
     font-weight   : 600;
     font-size     : 48px;
-    line-height   : 80px;
+    line-height   : 60px;
     color         : #000000;
     text-transform: capitalize;
 
@@ -113,24 +112,23 @@ body {
 h1.title_sb {
     font-weight   : 600;
     font-size     : 64px;
-    line-height   : 80px;
+    line-height   : 76px;
     text-transform: capitalize;
 }
 
 h2.title_sb {
     font-weight   : 600;
     font-size     : 48px;
-    line-height   : 80px;
+    line-height   : 60px;
     text-transform: capitalize;
     text-align    : center;
-    margin-bottom : 91px;
 }
 
 h3.title_sb {
     font-weight   : 600;
     font-size     : 30px;
     text-transform: capitalize;
-    line-height   : 80px;
+    line-height   : 42px;
 }
 
 .get-started {
@@ -200,6 +198,8 @@ h3.title_sb {
 }
 
 .skills {
+    margin-bottom: 282px;
+
     h1.title_sb {
         margin-bottom: 92px;
 
@@ -208,7 +208,7 @@ h3.title_sb {
     .skills-list {
         display              : grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows   : 1fr 1fr;
+        grid-template-rows   : 1fr minmax(343px, 1fr);
         gap                  : 18px;
 
         &__item {
@@ -219,12 +219,25 @@ h3.title_sb {
             background-color: $card-color;
             padding         : 5% 10%;
             border-radius   : 10px;
+            min-height      : 531px;
 
             .text_r {
                 font-size  : 16px;
                 line-height: 24px;
             }
 
+            img {
+                margin-bottom: 34px;
+            }
+
+            &:nth-child(2) {
+                img {
+
+                    width     : 80%;
+                    align-self: flex-end;
+
+                }
+            }
 
             &:first-child {
                 grid-row-start   : 1;
@@ -234,23 +247,100 @@ h3.title_sb {
             }
 
             &:last-child {
+
+
                 grid-row-start   : 2;
                 grid-row-end     : 3;
                 grid-column-start: 2;
                 grid-column-end  : 4;
                 display          : flex;
                 flex-direction   : row;
+                height           : 343px;
 
                 img {
-                    max-width  : 382px;
-                    width      : 100%;
-                    height     : auto;
-                    align-items: center;
+                    max-width: 382px;
+                    width    : 100%;
+                    margin   : 0;
+                    width    : 382px;
+                    height   : 255px;
                 }
             }
 
-            .btn{
+            .btn {
                 width: 70%;
+            }
+        }
+    }
+}
+
+
+.about-us {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    margin-bottom  : 40px;
+    margin-bottom  : 222px;
+
+    &__info {
+
+        flex: 0 1 50%;
+
+        .title_sb {
+            text-align: left;
+        }
+
+    }
+
+    img {
+        flex           : 0 1 40%;
+        object-fit     : contain;
+        object-position: center;
+
+    }
+
+    .achievements {
+        display        : flex;
+        flex-direction : row;
+        justify-content: space-around;
+
+        &__item {
+            font-family: $pop_sb;
+            font-size  : 48px;
+            line-height: 80px;
+            font-weight: 600;
+            color      : #2A3246;
+            text-align : center;
+
+            p {
+                font-family: $pop_sb;
+                font-size  : 20px;
+                line-height: 30px;
+                color      : #8F95A5;
+            }
+        }
+    }
+
+}
+
+.pricing {
+    h2 {
+        text-align   : center;
+        margin-bottom: 83px;
+    }
+
+    .pricing-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__item{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img{
+                height: 283px;
             }
         }
     }
