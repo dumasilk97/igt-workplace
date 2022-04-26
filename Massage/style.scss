@@ -1,0 +1,92 @@
+$blue     : #4318B4;
+$yellow   : #FF744C;
+$nunito-r : "NunitoSans-Regular";
+$nunito-b : "NunitoSans-bold";
+$nunito-bl: "NunitoSans-black";
+
+* {
+    font-family: $nunito-r;
+    font-size  : 16px;
+    line-height: 180%;
+}
+
+.header {
+    height : 20vh;
+    width  : 100vw;
+    padding: 38px 6.6vw;
+
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items    : center;
+
+    background-color: #4318B4;
+
+}
+
+.header-logo {
+    flex: 0 0 auto;
+
+    &__text {
+        color: white;
+
+        flex   : 1 0 auto;
+        padding: 0 4.7vw;
+
+        font-weight: 700;
+        font-size  : 17.498px;
+        line-height: 130%;
+
+        text-transform: capitalize;
+    }
+}
+
+.first-page {
+    height          : 80vh;
+    background-color: $blue;
+    color           : white;
+
+}
+
+.title {
+    font-family: $nunito-bl;
+    font-size  : 30px;
+    line-height: 150%;
+    margin     : 0 auto;
+
+    padding: 15px;
+    width  : 90vw;
+
+}
+
+h1 {
+    font-size: 36px;
+
+}
+
+.sub-text {
+    width      : 90vw;
+    margin     : 0 auto 15px;
+    font-weight: 400;
+    font-size  : 15px;
+    line-height: 180%;
+    color      : #fff;
+}
+
+.input-btn {
+    max-width       : 325px;
+    width           : 80vw;
+    color           : black;
+    padding         : 15px 0;
+    margin          : 0 auto;
+    background-color: $yellow;
+
+    font-size  : 18px;
+    font-family: $nunito-bl;
+    line-height: 180%;
+
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.05);
+    border-radius: 33px;
+    
+
+}
