@@ -11,7 +11,7 @@ $nunito-bl: "NunitoSans-black";
 }
 
 .header {
-    height : 20vh;
+    height : 115px;
     width  : 100vw;
     padding: 38px 6.6vw;
 
@@ -20,7 +20,10 @@ $nunito-bl: "NunitoSans-black";
     justify-content: space-between;
     align-items    : center;
 
+    position: fixed;
+
     background-color: #4318B4;
+    z-index: 1;
 
 }
 
@@ -42,9 +45,12 @@ $nunito-bl: "NunitoSans-black";
 }
 
 .first-page {
+    top: 115px;
+    position: relative;
     height          : 80vh;
     background-color: $blue;
     color           : white;
+
 
 }
 
@@ -85,8 +91,8 @@ h1 {
     font-family: $nunito-bl;
     line-height: 180%;
 
-    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.05);
+    box-shadow   : 0px 4px 60px rgba(0, 0, 0, 0.05);
     border-radius: 33px;
-    
+
 
 }

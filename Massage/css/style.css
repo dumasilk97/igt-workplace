@@ -5,7 +5,7 @@
 }
 
 .header {
-  height: 20vh;
+  height: 115px;
   width: 100vw;
   padding: 38px 6.6vw;
   display: -webkit-box;
@@ -21,7 +21,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
   background-color: #4318B4;
+  z-index: 1;
 }
 
 .header-logo {
@@ -43,6 +45,8 @@
 }
 
 .first-page {
+  top: 115px;
+  position: relative;
   height: 80vh;
   background-color: #4318B4;
   color: white;
