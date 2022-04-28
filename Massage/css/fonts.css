@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Karla-Regular';
+    src: url('../fonts/Karla-Regular.ttf');
+    src: url('../fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Karla-Regular.svg#Karla-Regular') format('svg'),
+         url('../fonts/Karla-Regular.ttf') format('truetype'),
+        url('../fonts/Karla-Regular.woff') format('woff'),a
+        url('../fonts/Karla-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Karla-Bold';
+    src:url('../fonts/Karla-Bold.eot');
+    src:url('../fonts/Karla-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Karla-Bold.svg#Karla-Bold') format('svg'),
+        url('../fonts/Karla-Bold.ttf') format('truetype'),
+        url('../fonts/Karla-Bold.woff') format('woff'),
+        url('../fonts/Karla-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Karla-Semibold';
+    src:url('../fonts/Karla-Semibold.eot');
+    src:url('../fonts/Karla-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Karla-Semibold.svg#Karla-Semibold') format('svg'),
+        url('../fonts/Karla-Semibold.ttf') format('truetype'),
+        url('../fonts/Karla-Semibold.woff') format('woff'),
+        url('../fonts/Karla-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
