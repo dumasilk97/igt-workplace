@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/__normalize.css">
+    <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/burger-menu.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
@@ -13,7 +14,7 @@
 
 <body>
     <header class="header">
-        <a class="logo" href="#"></a>
+        <a class="logo" href="#"><img src="img/logo.svg" alt="logo"></a>
         <nav class="header__menu">
             <a class="header__item" href="#">Home</a>
             <a class="header__item" href="#">Our Products</a>
@@ -22,16 +23,19 @@
             <a class="header__item" href="#">Contact</a>
             <a class="header__item" href="#">Styleguide</a>
         </nav>
-        <a class="header__bag" href="#">cart</a>
+        <a class="header__bag" href="#">cart <span></span></a>
     </header>
     <div class="first-page">
-        <h2 class="title">Best place to buy design.</h2>
-        <h1 class="title">Coffee Mugs.</h1>
-        <h2 class="title">The most versatile furniture system ever created. Designed to fit your life, made to move and
-            grow.</h2>
-        <form action="">
-            <input type="button" value="Explore Our Products">
-        </form>
+        <div class="first-page__wrapper">
+            <h2 class="title">Best place to buy design.</h2>
+            <h1 class="title">Coffee Mugs.</h1>
+            <h2 class="title">The most versatile furniture system ever created. Designed to fit your life, made to move
+                and
+                grow.</h2>
+            <form action="">
+                <input type="button" value="Explore Our Products">
+            </form>
+        </div>
     </div>
     <div class="info">
         <h3 class="title">Even the all-powerful Pointing has no control about the blind texts.</h3>
@@ -46,18 +50,22 @@
         <h3 class="chapter-topic">
             Featured Mugs
         </h3>
-        <div class="product__items--featured--featured">
-            <div class="product__item--featured">
+        <div class="product__items  product__items--featured">
+            <div class="product__item  product__item--featured">
                 <img src="img/pr1.png" alt="">
-                <p class="product__name--featured">Pink Premium Ceramic</p>
-                <p class="product__price--featured">$ 99.00 USD</p>
-                <p class="product__price--featured--old"></p>
+                <p class="product__name  product__name">Pink Premium Ceramic</p>
+                <div class="product__prices">
+                    <p class="product__price  product__price">$ 99.00 USD</p>
+                    <p class="product__price  product__price--old"></p>
+                </div>
             </div>
-            <div class="product__item--featured">
+            <div class="product__item  product__item--featured">
                 <img src="img/pr2.png" alt="">
-                <p class="product__name">Pink Premium Ceramic</p>
-                <p class="product__price">$ 99.00 USD</p>
-                <p class="product__price--old">$ 69.00 USD</p>
+                <p class="product__name">Golden Designers Mug</p>
+                <div class="product__prices">
+                    <p class="product__price product__price--sale">$ 99.00 USD</p>
+                    <p class="product__price--old">$ 69.00 USD</p>
+                </div>
             </div>
         </div>
     </div>
@@ -69,56 +77,74 @@
             <div class="product__item">
                 <img src="img/pr3.png" alt="">
                 <p class="product__name">Red Love Cup</p>
-                <p class="product__price">$25.00</p>
-                <p class="product__price--old">$ 37.00 USD</p>
+                <div class="product__prices">
+                    <p class="product__price--sale">$25.00</p>
+                    <p class="product__price--old">$ 37.00 USD</p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr4.png" alt="">
                 <p class="product__name">Black Tea Cup</p>
-                <p class="product__price">$15.00</p>
-                <p class="product__price--old">$ 29.00 USD</p>
+                <div class="product__prices">
+                    <p class="product__price--sale">$15.00</p>
+                    <p class="product__price--old">$ 29.00 USD</p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr5.png" alt="">
                 <p class="product__name">B&W Essentials Mug</p>
-                <p class="product__price">$ 19.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 19.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr6.png" alt="">
                 <p class="product__name">Winter Style Mug</p>
-                <p class="product__price">$ 25.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 25.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr7.png" alt="">
                 <p class="product__name">Ceramic Tea</p>
-                <p class="product__price">$ 46.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 46.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr8.png" alt="">
                 <p class="product__name">No Handle Bar Cup</p>
-                <p class="product__price">$ 34.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 34.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr9.png" alt="">
                 <p class="product__name">Espresso Cup by Mugs.co</p>
-                <p class="product__price">$ 25.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 25.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr10.png" alt="">
                 <p class="product__name">Pink Premium Ceramic</p>
-                <p class="product__price">$ 99.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 99.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
             <div class="product__item">
                 <img src="img/pr11.png" alt="">
                 <p class="product__name">Summer Designer Cup</p>
-                <p class="product__price">$ 29.00 USD</p>
-                <p class="product__price--old"></p>
+                <div class="product__prices">
+                    <p class="product__price">$ 29.00 USD</p>
+                    <p class="product__price--old"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -139,89 +165,83 @@
                 <h4 class="sale__title  title">
                     Get our Coffee Magazine
                 </h4>
-                <p class="sale-subtext">
+                <p class="sale__subtext">
                     The most versatile furniture system ever created. Designed to fit your life.
                 </p>
                 <form action="">
-                    <input type="button" value="start shopping">
+                    <input class="btn" type="button" value="start shopping">
                 </form>
             </div>
         </div>
     </div>
     <div class="articles">
-        <img class="articles__decoration" src="img/pr15.png" alt="">
+        <div class="articles__decoration"></div>
         <h4 class="chapter-topic">
             Behind the mugs, lifestyle stories
         </h4>
         <div class="articles__items">
-            <section class="articles__item">
-                <img class="articles__item" src="img/pr16.png" alt="">
-                <h1 class="article__title  title">Health Check: why do I get a headache when I haven’t had my coffee?
+            <section class="article__item">
+                <img class="article__img" src="img/pr16.png" alt="">
+                <h1 class="article__title">Health Check: why do I get a headache when I haven’t had my coffee?
                 </h1>
-                <p class="article__subtext  sub-text">It is a paradisematic country, in which roasted parts of sentences
+                <p class="article__subtext ">It is a paradisematic country, in which roasted parts of sentences
                     fly into your mouth.</p>
                 <p class="article__post-date">October 9, 2018</p>
             </section>
-            <section class="articles__item">
-                <img class="articles__item" src="img/pr17.png" alt="">
-                <h1 class="article__title  title">Health Check: why do I get a headache when I haven’t had my coffee?
+            <section class="article__item">
+                <img class="article__img" src="img/pr17.png" alt="">
+                <h1 class="article__title">Health Check: why do I get a headache when I haven’t had my coffee?
                 </h1>
-                <p class="article__subtext  sub-text">It is a paradisematic country, in which roasted parts of sentences
+                <p class="article__subtext ">It is a paradisematic country, in which roasted parts of sentences
                     fly into your mouth.</p>
                 <p class="article__post-date">October 9, 2018</p>
             </section>
-            <section class="articles__item">
-                <img class="articles__item" src="img/pr18.png" alt="">
-                <h1 class="article__title  title">How long does a cup of coffee keep you awake?</h1>
-                <p class="article__subtext  sub-text">It is a paradisematic country, in which roasted parts. Vel qui et
+            <section class="article__item">
+                <img class="article__img" src="img/pr18.png" alt="">
+                <h1 class="article__title">How long does a cup of coffee keep you awake?</h1>
+                <p class="article__subtext ">It is a paradisematic country, in which roasted parts. Vel qui et
                     ad voluptatem.</p>
                 <p class="article__post-date">October 9, 2018</p>
             </section>
-            <section class="articles__item">
-                <img class="articles__item" src="img/pr17.png" alt="">
-                <h1 class="article__title  title">Recent research suggests that heavy coffee drinkers may reap health
-                    benefits.</h1>
-                <p class="article__subtext  sub-text">It is a paradisematic country, in which roasted parts of sentences
-                    fly into your mouth.</p>
-                <p class="article__post-date">October 9, 2018</p>
-            </section>
+
         </div>
     </div>
     <div class="subscription">
-        <p class="subscription-text">Sign up and get free coffee bags</p>
-        <h3 class="title">Coffee Updates</h3>
+        <p class="subscription__text">Sign up and get free coffee bags</p>
+        <h3 class="subscription__title">Coffee Updates</h3>
         <form action="" class="subscribe">
-            <input type="email" name="subscription" id="">
-            <input type="submit" name="subscription">
+            <input class="subscribe__box" type="email" name="subscription" id="" placeholder="customer @coffestyle.io">
+            <input class="subscribe__btn" type="submit" name="subscription" value="Subscribe">
         </form>
     </div>
 
     <footer class="footer">
         <ul class="footer__col">
             <li class="footer__item"><a href="#"><img src="img/logo.svg" alt=""></a></li>
-            <li class="footer__item">Delivering the best coffee life since 1996. From coffee geeks to the real ones.</li>
-            <li class="footer__item  copyrights">CoffeeStyle Inc. © 1996</li>
+            <li class="footer__item"><a>Delivering the best coffee life since 1996. From coffee geeks to the real </a>
+            </li>
+            <li class="footer__item  <a>copyrights">CoffeeStyle Inc. © 1996</a></li>
         </ul>
         <ul class="footer__col">
-            <li class="footer__item">menu</li>
-            <li class="footer__item">Home</li>
-            <li class="footer__item">Our Products</li>
-            <li class="footer__item">About</li>
-            <li class="footer__item">Contact</li>
-            <li class="footer__item">Styleguide</li>
+            <li class="footer__item"><a href="#">menu</a></li>
+            <li class="footer__item"><a href="#">Home</a></li>
+            <li class="footer__item"><a href="#">Our Products</a></li>
+            <li class="footer__item"><a href="#">About</a></li>
+            <li class="footer__item"><a href="#">Contact</a></li>
+            <li class="footer__item"><a href="#">Styleguide</a></li>
         </ul>
         <ul class="footer__col">
-            <li class="footer__item">Follow Us</li>
-            <li class="footer__item">Facebook</li>
-            <li class="footer__item">Instagram</li>
-            <li class="footer__item">Pinterest</li>
-            <li class="footer__item">Twitter</li>
+            <li class="footer__item"><a href="#">Follow Us</a></li>
+            <li class="footer__item"><a href="#">Facebook</a></li>
+            <li class="footer__item"><a href="#">Instagram</a></li>
+            <li class="footer__item"><a href="#">Pinterest</a></li>
+            <li class="footer__item"><a href="#">Twitter</a></li>
         </ul>
         <ul class="footer__col">
-            <li class="footer__item">Contact Us</li>
+            <li class="footer__item"><a href="#">Contact Us</a></li>
             <li class="footer__item">We’re Always Happy to Help</li>
-            <li class="footer__item">us@coffeestyle.io</li>
-            <li class="footer__item">Powered by Webflow</li>
+            <li class="footer__item mail"><a href="mailto:d.belyanin55@gmail.com">us@coffeestyle.io</a></li>
+            <li class="footer__item"><a href="#">Powered by Webflow</a></li>
         </ul>
     </footer>
 </body>
