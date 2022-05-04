@@ -3,7 +3,21 @@
 }
 
 a {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  -webkit-transform: transform color(1);
+          transform: transform color(1);
   color: #1d1f2e;
+}
+
+a:hover {
+  -webkit-transition: -webkit-transform color .6s;
+  transition: -webkit-transform color .6s;
+  transition: transform color .6s;
+  transition: transform color .6s, -webkit-transform color .6s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #1d1f2d;
 }
 
 .header {
@@ -658,7 +672,7 @@ h1.title {
 }
 
 .mail {
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   line-height: 36px;
