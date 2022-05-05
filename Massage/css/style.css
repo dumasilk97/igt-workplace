@@ -411,7 +411,6 @@ h1.title {
   display: -ms-grid;
   display: grid;
   width: 50%;
-  min-width: 460px;
   gap: 4%;
   -ms-grid-columns: 60% 40%;
       grid-template-columns: 60% 40%;
@@ -420,6 +419,8 @@ h1.title {
 }
 
 .sale__images img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -480,12 +481,15 @@ h1.title {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 940px;
   margin: 0 auto;
 }
 
 .article__item {
-  width: 31.2%;
+  width: 30.2%;
   margin: 0 20px 0 0;
 }
 
@@ -672,9 +676,71 @@ h1.title {
 }
 
 .mail {
-  font-size: 16px;
+  overflow: hidden;
+  font-size: 14px;
   font-weight: 400;
   font-style: normal;
   line-height: 36px;
   color: #1d1f2e;
+}
+
+@media screen and (min-width: 842px) {
+  .menu__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .header__menu {
+    display: none;
+  }
+  .menu__btn {
+    top: 40px;
+    left: 90vw;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  header > .header__bag {
+    display: none;
+  }
+  .product__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .product__items > .product__item {
+    width: 45%;
+  }
+  .product__items > .product__item--featured {
+    width: 100%;
+  }
+  .sale > .sale__products {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sale__products > .sale__text,
+  .sale__text > .sale__title,
+  .sale__text > .sale__offer {
+    width: 100%;
+    max-width: inherit;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .articles > .articles__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .articles__items > .article__item {
+    width: 75%;
+    margin: 10px;
+  }
+  .sale__products > .sale__images {
+    width: 80vw;
+    margin-bottom: 30px;
+  }
+  .chapter-topic {
+    width: 70%;
+  }
 }
